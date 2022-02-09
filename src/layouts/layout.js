@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '../components/Footer';
 
 const Layout = ({ children, additionalClass = [] }) => (
-    <main className={['font-lato', ...additionalClass].join(' ')}>
+    <main className={['font-grotesque', ...additionalClass].join(' ')}>
         {children}
         <Footer />
     </main>
