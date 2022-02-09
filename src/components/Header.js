@@ -44,10 +44,11 @@ const Header = () => (
                             <button
                                 type="button"
                                 className="bg-white p-1 rounded-full text-secondary hover:text-gray focus:outline-none
-                                focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 relative"
                             >
                                 <span className="sr-only">View notifications</span>
                                 <ShoppingBagIcon className="h-6 w-6" aria-hidden="true" />
+                                <span className="absolute h-3 w-3 bottom-0 right-1 bg-red rounded-full" />
                             </button>
                         </div>
                         <div className="-mr-2 flex items-center md:hidden">
