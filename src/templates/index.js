@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
+import ProductCards from '../sections/ProductCards';
 
 const IndexPage = ({ data }) => {
     const products = data.allProduct.nodes;
@@ -10,6 +11,7 @@ const IndexPage = ({ data }) => {
             <Helmet>
                 <title>Flotiq Gatsby shop starter</title>
             </Helmet>
+            <ProductCards additionalClass={['space-x-8']} />
             {products.map((product) => (
                 <a href={`/${product.slug}`}><p key={product.id}>{product.name}</p></a>
             ))}
