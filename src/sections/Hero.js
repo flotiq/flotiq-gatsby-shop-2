@@ -1,15 +1,14 @@
 import React from 'react';
-import { Button, Card, Header, Image, Paragraph } from 'flotiq-components-react';
+import { Button, Card, Header, Paragraph } from 'flotiq-components-react';
 import { navigate } from 'gatsby';
 
 const Hero = ({ heroImage, headerText, paragraphText, buttonLabel, onClick }) => (
-
     <Card
         vertical
         onClick={onClick}
         bordered={false}
         rounded="none"
-        additionalClasses={['mb-4 cursor-pointer mx-auto ']}
+        additionalClasses={['mb-4']}
         proportionsForVertical={{
             body: '2/5',
             img: '3/5',
@@ -19,7 +18,7 @@ const Hero = ({ heroImage, headerText, paragraphText, buttonLabel, onClick }) =>
         <Card.Body
             additionalClasses={[
                 'flex flex-col items-start justify-center '
-                + 'order-2 lg:order-1 px-10 xl:pl-32 lg:pr-5 !py-22 xl:!py-28 min-h-1/2vh',
+                + 'order-2 lg:order-1 !px-10 xl:!px-20 !py-22 xl:!py-28 min-h-1/2vh',
             ]}
         >
             <Header
@@ -42,7 +41,6 @@ const Hero = ({ heroImage, headerText, paragraphText, buttonLabel, onClick }) =>
         >
             <Card.Img src={heroImage} additionalClasses={['block lg:hidden w-full']} />
         </div>
-
     </Card>
 );
 
