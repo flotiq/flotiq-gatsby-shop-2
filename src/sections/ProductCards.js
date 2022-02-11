@@ -7,7 +7,7 @@ const ProductCards = ({ products, additionalClass }) => (
         className={['grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 max-w-7xl mt-6 mb-6 '
         + 'mx-auto px-4 py-4 sm:px-6 lg:px-8 xl:px-0', ...additionalClass].join(' ')}
     >
-        {products.slice(0, 4).map((product) => (
+        {products.map((product) => (
             <ProductCard
                 key={product.id}
                 onClick={() => { navigate(`/${product.slug}`); }}
