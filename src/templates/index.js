@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
+import ProductCards from '../sections/ProductCards';
 
 const IndexPage = ({ data }) => {
     const products = data.allProduct.nodes;
@@ -10,6 +11,7 @@ const IndexPage = ({ data }) => {
             <Helmet>
                 <title>Flotiq Gatsby shop starter</title>
             </Helmet>
+            <ProductCards products={products} additionalClass={['my-5']} />
             {products.map((product) => (
                 <a href={`/${product.slug}`}><p key={product.id}>{product.name}</p></a>
             ))}
@@ -32,13 +34,27 @@ export const pageQuery = graphql`
                 description
                 id
                 productGallery {
+                    extension
+                    url
+                    width
+                    height
                     localFile {
                         publicURL
+                        childImageSharp {
+                            gatsbyImageData(layout: FULL_WIDTH)
+                        }
                     }
                 }
                 productImage {
+                    extension
+                    url
+                    width
+                    height
                     localFile {
                         publicURL
+                        childImageSharp {
+                            gatsbyImageData(layout: FULL_WIDTH)
+                        }
                     }
                 }
             }
