@@ -1,17 +1,31 @@
 import React from 'react';
-import { Card } from 'flotiq-components-react';
+import { Button, Card } from 'flotiq-components-react';
 
-const ProductCard = () => (
+const ProductCard = ({ name, description, price, productImage }) => (
     <Card
         bordered={false}
         rounded="none"
-        additionalClasses={['basis-1/4 shrink']}
     >
         <Card.Img
-            src="https://flotiq.com/blog/static/8050fcb7456bc70ea329293be5f34f40/e3fc1/_media-3a62e398-fbe3-46e8-ba5b-05a2690390ae.webp"
+            src={productImage}
+            alt={name}
         />
-        <Card.Body>
-            Test
+        <Card.Body additionalClasses={['!px-0']}>
+            <Card.Title additionalClasses={['flex justify-between !font-medium']}>
+                <span>{name}</span>
+                <span>
+                    $
+                    {price}
+                </span>
+            </Card.Title>
+            <Card.Text additionalClasses={['line-clamp-4']}>
+                {description}
+            </Card.Text>
+            <Button
+                label="Button"
+                rounded="none"
+                size="sm"
+            />
         </Card.Body>
     </Card>
 );

@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
             <Helmet>
                 <title>Flotiq Gatsby shop starter</title>
             </Helmet>
-            <ProductCards additionalClass={['space-x-8']} />
+            <ProductCards products={products} additionalClass={['my-5']} />
             {products.map((product) => (
                 <a href={`/${product.slug}`}><p key={product.id}>{product.name}</p></a>
             ))}
@@ -34,13 +34,27 @@ export const pageQuery = graphql`
                 description
                 id
                 productGallery {
+                    extension
+                    url
+                    width
+                    height
                     localFile {
                         publicURL
+                        childImageSharp {
+                            gatsbyImageData(layout: FULL_WIDTH)
+                        }
                     }
                 }
                 productImage {
+                    extension
+                    url
+                    width
+                    height
                     localFile {
                         publicURL
+                        childImageSharp {
+                            gatsbyImageData(layout: FULL_WIDTH)
+                        }
                     }
                 }
             }
