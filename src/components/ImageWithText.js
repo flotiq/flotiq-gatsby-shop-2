@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Header, Image } from 'flotiq-components-react';
+import { Button, Header } from 'flotiq-components-react';
 
 const ImageWithText = ({ image, headerText1, headerText2, headerText3, buttonLabel }) => (
     <div className="relative bg-cover bg-center" style={{ backgroundImage: `url('${image}')` }}>
