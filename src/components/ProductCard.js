@@ -1,11 +1,13 @@
 import React from 'react';
 import { Button, Card } from 'flotiq-components-react';
+import { navigate } from 'gatsby';
 
-const ProductCard = ({ name, description, price, productImage, buttonLabel }) => (
+const ProductCard = ({ name, description, price, productImage, buttonLabel, slug }) => (
     <Card
         bordered={false}
         rounded="none"
         additionalClasses={['!bg-transparent mb-5 lg:mb-0']}
+        onClick={() => navigate(`/${slug}`)}
     >
         <Card.Img
             src={productImage}

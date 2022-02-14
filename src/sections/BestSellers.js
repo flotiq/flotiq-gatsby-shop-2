@@ -28,6 +28,7 @@ const BestSellers = ({ products, additionalClass, headerText }) => (
                         price={product.price}
                         productImage={product.productImage[0] && product.productImage[0].localFile.publicURL}
                         buttonLabel="Add to cart"
+                        slug={product.slug}
                     />
                 ))}
             </div>
