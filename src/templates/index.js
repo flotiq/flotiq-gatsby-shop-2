@@ -2,6 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
+import ImageWithText from '../components/ImageWithText';
+import ImageWithTextBackground from '../assets/bg-image.jpg';
 import Hero from '../sections/Hero';
 import HeroImage from '../assets/hero-bg.jpg';
 import BestSellers from '../sections/BestSellers';
@@ -32,7 +34,14 @@ const IndexPage = ({ data }) => {
             />
             <BestSellers products={products} additionalClass={['bg-green-gray py-14']} headerText="Best sellers" />
             <Products products={products} additionalClass={['my-5']} headerText="Products" />
-            <ReviewsSection headerText="Reviews" reviews={reviews} avatar={Avatar} />
+            <ReviewsSection headerText="Reviews" reviews={reviews} avatar={Avatar} additionalClass={['my-24']} />
+            <ImageWithText
+                image={ImageWithTextBackground}
+                headerText1="Buy one"
+                headerText2="plant get"
+                headerText3="one for free"
+                buttonLabel="All the products"
+            />
         </Layout>
     );
 };

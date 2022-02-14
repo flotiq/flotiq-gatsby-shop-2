@@ -1,8 +1,11 @@
 import React from 'react';
 import { Image, Header, Paragraph } from 'flotiq-components-react';
 
-const ReviewsSection = ({ headerText, reviews, avatar }) => (
-    <div className="flex flex-wrap items-center max-w-7xl mx-auto py-1 md:py-6 px-4 sm:px-6 lg:px-8">
+const ReviewsSection = ({ headerText, reviews, avatar, additionalClass }) => (
+    <div
+        className={['flex flex-wrap items-center max-w-7xl '
+        + 'mx-auto py-1 md:py-6 px-4 sm:px-6 lg:px-8', ...additionalClass].join(' ')}
+    >
         <Header
             text={headerText}
             additionalClasses={['!font-light !text-6xl basis-full lg:basis-1/4 mb-5 lg:mb-0 text-center lg:text-left']}
