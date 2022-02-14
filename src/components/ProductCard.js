@@ -5,6 +5,7 @@ const ProductCard = ({ name, description, price, productImage, buttonLabel }) =>
     <Card
         bordered={false}
         rounded="none"
+        additionalClasses={['!bg-transparent mb-5 lg:mb-0']}
     >
         <Card.Img
             src={productImage}

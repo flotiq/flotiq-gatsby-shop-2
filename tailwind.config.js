@@ -18,6 +18,9 @@ module.exports = {
             roboto: ['Roboto', 'sans-serif'],
             grotesque: ['Darker Grotesque', 'sans-serif'],
         },
+        minHeight: {
+            '1/2vh': '50vh',
+        },
     },
     presets: [
         require('./node_modules/flotiq-components-react/dist/tailwind.preset'), // Flotiq Component theme presets

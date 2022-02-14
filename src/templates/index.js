@@ -2,6 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
+import Hero from '../sections/Hero';
+import HeroImage from '../assets/hero-bg.jpg';
+import ProductCards from '../sections/ProductCards';
+import BestSellers from '../sections/BestSellers';
 import Products from '../sections/Products';
 
 const IndexPage = ({ data }) => {
@@ -11,6 +15,14 @@ const IndexPage = ({ data }) => {
             <Helmet>
                 <title>Flotiq Gatsby shop starter</title>
             </Helmet>
+            <Hero
+                headerText="Best Plants for your home"
+                paragraphText="Check our store and find the most beautiful plant for your home"
+                buttonLabel="All the products"
+                heroImage={HeroImage}
+            />
+            <BestSellers products={products} additionalClass={['bg-green-gray py-14']} headerText="Best sellers" />
+            <ProductCards products={products} additionalClass={['my-5']} />
             <Products products={products} additionalClass={['my-5']} headerText="Products" />
         </Layout>
     );
