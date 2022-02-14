@@ -4,12 +4,21 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
 import Hero from '../sections/Hero';
 import HeroImage from '../assets/hero-bg.jpg';
-import ProductCards from '../sections/ProductCards';
 import BestSellers from '../sections/BestSellers';
 import Products from '../sections/Products';
+import ReviewsSection from '../sections/ReviewsSection';
+import Avatar from '../assets/avatar.png';
 
 const IndexPage = ({ data }) => {
     const products = data.allProduct.nodes;
+    const reviews = [
+        { review: 'The best store in our town! plants are always in good condition.',
+            author: 'Joe Jonas' },
+        { review: 'I ordered 3 packs of roses last friday and they all came so fast and fresh',
+            author: 'Kate Smith' },
+        { review: 'The staff was so sweet they helped me decorate my room with plants!',
+            author: 'John Doe' },
+    ];
     return (
         <Layout additionalClass={['bg-white']}>
             <Helmet>
@@ -23,6 +32,7 @@ const IndexPage = ({ data }) => {
             />
             <BestSellers products={products} additionalClass={['bg-green-gray py-14']} headerText="Best sellers" />
             <Products products={products} additionalClass={['my-5']} headerText="Products" />
+            <ReviewsSection headerText="Reviews" reviews={reviews} avatar={Avatar} />
         </Layout>
     );
 };
