@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
 import Hero from '../sections/Hero';
 import HeroImage from '../assets/hero-bg.jpg';
-import ProductCards from '../sections/ProductCards';
 import BestSellers from '../sections/BestSellers';
 import Products from '../sections/Products';
 import ReviewsSection from '../sections/ReviewsSection';
