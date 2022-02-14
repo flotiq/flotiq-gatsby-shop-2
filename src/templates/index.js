@@ -4,15 +4,26 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
 import ImageWithText from '../components/ImageWithText';
 import ImageWithTextBackground from '../assets/bg-image.jpg';
+import Hero from '../sections/Hero';
+import HeroImage from '../assets/hero-bg.jpg';
+import ProductCards from '../sections/ProductCards';
+import BestSellers from '../sections/BestSellers';
 
 const IndexPage = ({ data }) => {
     const products = data.allProduct.nodes;
-
     return (
         <Layout additionalClass={['bg-white']}>
             <Helmet>
                 <title>Flotiq Gatsby shop starter</title>
             </Helmet>
+            <Hero
+                headerText="Best Plants for your home"
+                paragraphText="Check our store and find the most beautiful plant for your home"
+                buttonLabel="All the products"
+                heroImage={HeroImage}
+            />
+            <BestSellers products={products} additionalClass={['bg-green-gray py-14']} headerText="Best sellers" />
+            <ProductCards products={products} additionalClass={['my-5']} />
             <ImageWithText
                 image={ImageWithTextBackground}
                 headerText1="Buy one"
@@ -39,13 +50,27 @@ export const pageQuery = graphql`
                 description
                 id
                 productGallery {
+                    extension
+                    url
+                    width
+                    height
                     localFile {
                         publicURL
+                        childImageSharp {
+                            gatsbyImageData(layout: FULL_WIDTH)
+                        }
                     }
                 }
                 productImage {
+                    extension
+                    url
+                    width
+                    height
                     localFile {
                         publicURL
+                        childImageSharp {
+                            gatsbyImageData(layout: FULL_WIDTH)
+                        }
                     }
                 }
             }
