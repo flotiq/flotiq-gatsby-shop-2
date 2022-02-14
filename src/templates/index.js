@@ -34,7 +34,12 @@ const IndexPage = ({ data }) => {
             />
             <BestSellers products={products} additionalClass={['bg-green-gray py-14']} headerText="Best sellers" />
             <Products products={products} additionalClass={['my-5']} headerText="Products" />
-            <ReviewsSection headerText="Reviews" reviews={reviews} avatar={Avatar} additionalClass={['my-24']} />
+            <ReviewsSection
+                headerText="Reviews"
+                reviews={reviews}
+                avatar={Avatar}
+                additionalClass={['my-10 lg:my-24']}
+            />
             <ImageWithText
                 image={ImageWithTextBackground}
                 headerText1="Buy one"
