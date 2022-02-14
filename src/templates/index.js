@@ -5,6 +5,7 @@ import Layout from '../layouts/layout';
 import Hero from '../sections/Hero';
 import HeroImage from '../assets/hero-bg.jpg';
 import ProductCards from '../sections/ProductCards';
+import BestSellers from '../sections/BestSellers';
 
 const IndexPage = ({ data }) => {
     const products = data.allProduct.nodes;
@@ -19,6 +20,7 @@ const IndexPage = ({ data }) => {
                 buttonLabel="All the products"
                 heroImage={HeroImage}
             />
+            <BestSellers products={products} additionalClass={['bg-green-gray py-14']} headerText="Best sellers" />
             <ProductCards products={products} additionalClass={['my-5']} />
         </Layout>
     );
