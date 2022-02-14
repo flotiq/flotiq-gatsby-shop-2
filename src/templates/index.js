@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
 import Hero from '../sections/Hero';
 import HeroImage from '../assets/hero-bg.jpg';
+import ProductCards from '../sections/ProductCards';
 
 const IndexPage = ({ data }) => {
     const products = data.allProduct.nodes;
@@ -18,9 +19,7 @@ const IndexPage = ({ data }) => {
                 buttonLabel="All the products"
                 heroImage={HeroImage}
             />
-            {products.map((product) => (
-                <a href={`/${product.slug}`}><p key={product.id}>{product.name}</p></a>
-            ))}
+            <ProductCards products={products} additionalClass={['my-5']} />
         </Layout>
     );
 };
@@ -40,13 +39,27 @@ export const pageQuery = graphql`
                 description
                 id
                 productGallery {
+                    extension
+                    url
+                    width
+                    height
                     localFile {
                         publicURL
+                        childImageSharp {
+                            gatsbyImageData(layout: FULL_WIDTH)
+                        }
                     }
                 }
                 productImage {
+                    extension
+                    url
+                    width
+                    height
                     localFile {
                         publicURL
+                        childImageSharp {
+                            gatsbyImageData(layout: FULL_WIDTH)
+                        }
                     }
                 }
             }
