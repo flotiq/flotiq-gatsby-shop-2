@@ -2,6 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
+import Hero from '../sections/Hero';
+import HeroImage from '../assets/hero-bg.jpg';
 
 const IndexPage = ({ data }) => {
     const products = data.allProduct.nodes;
@@ -10,6 +12,12 @@ const IndexPage = ({ data }) => {
             <Helmet>
                 <title>Flotiq Gatsby shop starter</title>
             </Helmet>
+            <Hero
+                headerText="Best Plants for your home"
+                paragraphText="Check our store and find the most beautiful plant for your home"
+                buttonLabel="All the products"
+                heroImage={HeroImage}
+            />
             {products.map((product) => (
                 <a href={`/${product.slug}`}><p key={product.id}>{product.name}</p></a>
             ))}
