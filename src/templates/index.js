@@ -22,7 +22,6 @@ const IndexPage = ({ data }) => {
                 heroImage={HeroImage}
             />
             <BestSellers products={products} additionalClass={['bg-green-gray py-14']} headerText="Best sellers" />
-            <ProductCards products={products} additionalClass={['my-5']} />
             <Products products={products} additionalClass={['my-5']} headerText="Products" />
         </Layout>
     );
