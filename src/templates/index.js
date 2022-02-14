@@ -8,6 +8,7 @@ import BestSellers from '../sections/BestSellers';
 import Products from '../sections/Products';
 import ReviewsSection from '../sections/ReviewsSection';
 import Avatar from '../assets/avatar.png';
+import Contact from '../sections/Contact';
 
 const IndexPage = ({ data }) => {
     const products = data.allProduct.nodes;
@@ -33,6 +34,7 @@ const IndexPage = ({ data }) => {
             <BestSellers products={products} additionalClass={['bg-green-gray py-14']} headerText="Best sellers" />
             <Products products={products} additionalClass={['my-5']} headerText="Products" />
             <ReviewsSection headerText="Reviews" reviews={reviews} avatar={Avatar} />
+            <Contact />
         </Layout>
     );
 };
