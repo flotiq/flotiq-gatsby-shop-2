@@ -2,17 +2,24 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
+import ImageWithText from '../components/ImageWithText';
+import ImageWithTextBackground from '../assets/bg-image.jpg';
 
 const IndexPage = ({ data }) => {
     const products = data.allProduct.nodes;
+
     return (
         <Layout additionalClass={['bg-white']}>
             <Helmet>
                 <title>Flotiq Gatsby shop starter</title>
             </Helmet>
-            {products.map((product) => (
-                <a href={`/${product.slug}`}><p key={product.id}>{product.name}</p></a>
-            ))}
+            <ImageWithText
+                image={ImageWithTextBackground}
+                headerText1="Buy one"
+                headerText2="plant get"
+                headerText3="one for free"
+                buttonLabel="All the products"
+            />
         </Layout>
     );
 };
