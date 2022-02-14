@@ -10,6 +10,9 @@ import BestSellers from '../sections/BestSellers';
 import Products from '../sections/Products';
 import ReviewsSection from '../sections/ReviewsSection';
 import Avatar from '../assets/avatar.png';
+import Contact from '../sections/Contact';
+import Logo from '../assets/planty-logo.svg';
+import contactFormImage from '../assets/contact-form-image.jpg';
 
 const IndexPage = ({ data }) => {
     const products = data.allProduct.nodes;
@@ -46,6 +49,19 @@ const IndexPage = ({ data }) => {
                 headerText2="plant get"
                 headerText3="one for free"
                 buttonLabel="All the products"
+            />
+            <Contact
+                logoImage={Logo}
+                additionalClass={['my-5']}
+                contactFormImage={contactFormImage}
+                formHeaderText="Connect with us"
+                nameInputLabel="Name"
+                emailInputLabel="Email"
+                messageInputLabel="Message"
+                buttonLabel="Send"
+                phoneNumber="+123 456 789"
+                address="Demo Street"
+                emailAddress="hello@world.com"
             />
         </Layout>
     );
