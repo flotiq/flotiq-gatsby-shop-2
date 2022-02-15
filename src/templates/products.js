@@ -7,14 +7,22 @@ import ProductCards from '../sections/ProductCards';
 import BestSellers from '../sections/BestSellers';
 import ImageWithText from '../components/ImageWithText';
 import ImageWithTextBackground from '../assets/bg-image.jpg';
+import CategoriesChoiceBar from '../components/CategoriesChoiceBar';
 
 const ProductsPage = ({ data }) => {
     const products = data.allProduct.nodes;
+    const categoryTabs = [
+        { name: 'Category 1', href: '#', current: true },
+        { name: 'Category 2', href: '#', current: false },
+        { name: 'Cactus', href: '#', current: false },
+        { name: 'Big Plants', href: '#', current: false },
+    ];
     return (
         <Layout additionalClass={['bg-white']}>
             <Helmet>
                 <title>Flotiq Gatsby shop starter</title>
             </Helmet>
+            <CategoriesChoiceBar additionalClass={['my-5']} categoryTabs={categoryTabs} />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between">
                     <Header
