@@ -67,12 +67,28 @@ const socialIcons = {
     ],
 };
 
-const Contact = ({ logoImage, contactFormImage, additionalClass, formHeaderText, nameInputLabel, emailInputLabel, messageInputLabel, buttonLabel, phoneNumber, address, emailAddress }) => (
-    <div className={['flex flex-wrap max-w-7xl mx-auto py-1 md:py-6 px-4 sm:px-6 lg:px-8', ...additionalClass].join(' ')}>
-        <div className="basis-full lg:basis-1/2 flex flex-col items-start justify-between order-2 lg:order-1">
-            <Image url={logoImage} additionalClasses={['h-10 md:h-16 w-auto']} />
-            <div className="flex">
-                <div className="flex flex-col space-y-1">
+const Contact = ({
+    logoImage,
+    contactFormImage,
+    additionalClass,
+    formHeaderText,
+    nameInputLabel,
+    emailInputLabel,
+    messageInputLabel,
+    buttonLabel,
+    phoneNumber,
+    address,
+    emailAddress,
+}) => (
+    <div className={['flex flex-wrap max-w-7xl mx-auto '
+    + 'py-1 md:py-6 px-4 sm:px-6 lg:px-8', ...additionalClass].join(' ')}
+    >
+        <div className="basis-full lg:basis-1/2 flex flex-col items-start
+        justify-between order-2 lg:order-1 md:mt-10 lg:mt-0"
+        >
+            <Image url={logoImage} additionalClasses={['hidden md:block h-10 md:h-16 w-auto']} />
+            <div className="w-full md:w-auto flex justify-center mt-10 lg:mt-0">
+                <div className="hidden md:block flex flex-col space-y-1">
                     {socialIcons.social.map((item) => (
                         <div className="flex items-center space-x-7">
                             <a
@@ -86,7 +102,7 @@ const Contact = ({ logoImage, contactFormImage, additionalClass, formHeaderText,
                         </div>
                     ))}
                 </div>
-                <div className="flex flex-col space-y-1 pl-24">
+                <div className="flex flex-col space-y-1 md:pl-24">
                     <p className="h-10 p-1 text-xl font-light">
                         Phone:
                         <a href="/" className="font-normal ml-5">
@@ -103,6 +119,22 @@ const Contact = ({ logoImage, contactFormImage, additionalClass, formHeaderText,
                             {emailAddress}
                         </a>
                     </p>
+                </div>
+            </div>
+            <div className="w-full md:hidden flex items-center justify-between mt-10">
+                <Image url={logoImage} additionalClasses={['h-10 md:h-16 w-auto']} />
+                <div className="flex space-x-6">
+                    {socialIcons.social.map((item) => (
+                        <div className="flex items-center">
+                            <a
+                                key={item.name}
+                                href={item.href}
+                                className="text-gray p-2"
+                            >
+                                <item.icon className="h-6 w-6" aria-hidden="true" />
+                            </a>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
