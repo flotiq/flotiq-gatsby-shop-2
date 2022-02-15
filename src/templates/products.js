@@ -1,36 +1,46 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { graphql, navigate } from 'gatsby';
+import { graphql } from 'gatsby';
+import { Header } from 'flotiq-components-react';
 import Layout from '../layouts/layout';
-import Products from '../sections/Products';
-import ProductCard from '../components/ProductCard';
+import ProductCards from '../sections/ProductCards';
+import BestSellers from '../sections/BestSellers';
+import ImageWithText from '../components/ImageWithText';
+import ImageWithTextBackground from '../assets/bg-image.jpg';
+import CategoriesChoiceBar from '../components/CategoriesChoiceBar';
 
 const ProductsPage = ({ data }) => {
     const products = data.allProduct.nodes;
+    const categoryTabs = [
+        { name: 'Category 1', href: '#', current: true },
+        { name: 'Category 2', href: '#', current: false },
+        { name: 'Cactus', href: '#', current: false },
+        { name: 'Big Plants', href: '#', current: false },
+    ];
     return (
         <Layout additionalClass={['bg-white']}>
             <Helmet>
                 <title>Flotiq Gatsby shop starter</title>
             </Helmet>
+            <CategoriesChoiceBar additionalClass={['my-5']} categoryTabs={categoryTabs} />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10
-                mt-6 mb-6"
-                >
-                    {products.slice(0, 4).map((product) => (
-                        <ProductCard
-                            key={product.id}
-                            onClick={() => { navigate(`/${product.slug}`); }}
-                            name={product.name}
-                            description={product.description}
-                            price={product.price}
-                            productImage={product.productImage[0] && product.productImage[0].localFile.publicURL}
-                            buttonLabel="Add to cart"
-                            slug={product.slug}
-                        />
-                    ))}
+                <div className="flex items-center justify-between">
+                    <Header
+                        text="Category 1"
+                        additionalClasses={['!text-xl md:!text-3xl !font-normal font-roboto !p-0']}
+                    />
                 </div>
+                <ProductCards products={products} additionalClass="my-5" />
             </div>
+            <BestSellers products={products} additionalClass={['bg-green-gray py-14']} headerText="Best sellers" />
+            <ImageWithText
+                image={ImageWithTextBackground}
+                headerText1="Buy one"
+                headerText2="plant get"
+                headerText3="one for free"
+                buttonLabel="All the products"
+                additionalClass={['my-10']}
+            />
         </Layout>
     );
 };

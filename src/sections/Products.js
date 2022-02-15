@@ -1,7 +1,6 @@
 import React from 'react';
-import { navigate } from 'gatsby';
 import { Header } from 'flotiq-components-react';
-import ProductCard from '../components/ProductCard';
+import ProductCards from './ProductCards';
 
 const Products = ({ products, additionalClass, headerText }) => (
     <div className={['max-w-7xl mx-auto px-4 sm:px-6 lg:px-8', ...additionalClass].join(' ')}>
@@ -14,23 +13,7 @@ const Products = ({ products, additionalClass, headerText }) => (
                 View all products
             </a>
         </div>
-        <div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10
-                mt-6 mb-6"
-        >
-            {products.slice(0, 4).map((product) => (
-                <ProductCard
-                    key={product.id}
-                    onClick={() => { navigate(`/${product.slug}`); }}
-                    name={product.name}
-                    description={product.description}
-                    price={product.price}
-                    productImage={product.productImage[0] && product.productImage[0].localFile.publicURL}
-                    buttonLabel="Add to cart"
-                    slug={product.slug}
-                />
-            ))}
-        </div>
+        <ProductCards products={products} additionalClass={['my-5']} />
     </div>
 );
 
