@@ -3,7 +3,7 @@ import LogoBadge from '../assets/flotiq-logo-badge.svg';
 
 const Footer = () => (
     <footer className="flex flex-col items-center justify-center">
-        <div className="w-auto px-5 py-3 md:py-5 mt-20
+        <div className="w-auto px-5 py-3 md:py-5 mt-5 md:mt-20
                 inline-flex justify-between md:justify-center items-center
                 bg-light-gray rounded-t-lg"
         >
