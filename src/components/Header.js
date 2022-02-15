@@ -10,16 +10,16 @@ const Header = () => (
                 <div className="max-w-7xl mx-auto py-1 md:py-6 px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
                         <div className="w-full flex justify-center md:justify-between">
-                            <div className="flex-shrink-0 flex items-center">
+                            <a href="/" className="flex-shrink-0 flex items-center">
                                 <img
                                     className="block h-10 md:h-16 w-auto"
                                     src={Logo}
                                     alt="Workflow"
                                 />
-                            </div>
+                            </a>
                             <div className="hidden md:ml-6 md:flex md:space-x-16">
                                 <a
-                                    href="/"
+                                    href="/products"
                                     className="inline-flex items-center px-1 pt-1 text-xl font-medium text-secondary"
                                 >
                                     Store

@@ -49,6 +49,7 @@ const IndexPage = ({ data }) => {
                 headerText2="plant get"
                 headerText3="one for free"
                 buttonLabel="All the products"
+                additionalClass={['']}
             />
         </Layout>
     );
