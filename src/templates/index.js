@@ -50,19 +50,6 @@ const IndexPage = ({ data }) => {
                 headerText3="one for free"
                 buttonLabel="All the products"
             />
-            <Contact
-                logoImage={Logo}
-                additionalClass={['my-5']}
-                contactFormImage={contactFormImage}
-                formHeaderText="Connect with us"
-                nameInputLabel="Name"
-                emailInputLabel="Email"
-                messageInputLabel="Message"
-                buttonLabel="Send"
-                phoneNumber="+123 456 789"
-                address="Demo Street"
-                emailAddress="hello@world.com"
-            />
         </Layout>
     );
 };
