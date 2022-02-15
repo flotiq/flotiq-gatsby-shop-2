@@ -19,7 +19,7 @@ const Header = () => (
                             </a>
                             <div className="hidden md:ml-6 md:flex md:space-x-16">
                                 <a
-                                    href="/products"
+                                    href="/products/"
                                     className="inline-flex items-center px-1 pt-1 text-xl font-medium text-secondary"
                                 >
                                     Store
