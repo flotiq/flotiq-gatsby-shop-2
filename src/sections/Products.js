@@ -9,7 +9,7 @@ const Products = ({ products, additionalClass, headerText }) => (
             <Header text={headerText} additionalClasses={['!text-xl md:!text-3xl !font-normal font-roboto !p-0']} />
             <a
                 className="text-right underline underline-offset-2 decoration-1 text-lg hover:text-secondary"
-                href="/"
+                href="/products/"
             >
                 View all products
             </a>
