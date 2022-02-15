@@ -12,7 +12,7 @@ const Header = () => (
                         <div className="w-full flex justify-center md:justify-between">
                             <div className="flex-shrink-0 flex items-center">
                                 <img
-                                    className="block h-10 md:h-12 w-auto"
+                                    className="block h-10 md:h-16 w-auto"
                                     src={Logo}
                                     alt="Workflow"
                                 />
