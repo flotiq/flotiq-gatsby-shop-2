@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
-import { Header } from 'flotiq-components-react';
+import { Header, Pagination } from 'flotiq-components-react';
 import Layout from '../layouts/layout';
 import ProductCards from '../sections/ProductCards';
 import BestSellers from '../sections/BestSellers';
@@ -31,6 +31,14 @@ const ProductsPage = ({ data }) => {
                     />
                 </div>
                 <ProductCards products={products} additionalClass="my-5" />
+                <Pagination
+                    borderVariant="secondary"
+                    numOfPages={10}
+                    page={1}
+                    rounded="none"
+                    variant="secondary"
+                    containerAdditionalClasses={['!mt-0 mb-10']}
+                />
             </div>
             <BestSellers products={products} additionalClass={['bg-green-gray py-14']} headerText="Best sellers" />
             <ImageWithText
