@@ -6,7 +6,7 @@ const ProductCard = ({ name, description, price, productImage, buttonLabel, slug
     <Card
         bordered={false}
         rounded="none"
-        additionalClasses={['!bg-transparent mb-5 lg:mb-0']}
+        additionalClasses={['!bg-transparent mb-5 cursor-pointer']}
         onClick={() => navigate(`/${slug}`)}
     >
         <Card.Img
