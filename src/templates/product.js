@@ -1,12 +1,81 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { Image, Paragraph, Header, Button } from 'flotiq-components-react';
+import { PlusIcon, MinusIcon } from '@heroicons/react/solid';
 import Layout from '../layouts/layout';
+import Products from '../sections/Products';
+import ProductBackButton from '../components/ProductBackButton';
 
 const ProductTemplate = ({ data }) => {
     const { product } = data;
+    const products = data.allProduct.nodes;
     return (
         <Layout additionalClass={['bg-white']}>
-            <div>Product</div>
+            <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+                <ProductBackButton additionalClass={['mt-12 mb-5']} backButtonText="Back to all products" />
+                <div className="flex flex-wrap mb-10">
+                    <div
+                        className="flex basis-full lg:basis-1/2 bg-cover bg-center"
+                        style={{ backgroundImage:
+                                `url('${product.productImage[0] && product.productImage[0].localFile.publicURL}')` }}
+                    >
+                        <Image
+                            url={product.productImage[0] && product.productImage[0].localFile.publicURL}
+                            additionalClasses={['w-full lg:hidden']}
+                        />
+                    </div>
+                    <div className="flex flex-col basis-full lg:basis-1/2 pl-0 lg:pl-12 pt-5 pb-10 bg-white">
+                        <Header
+                            additionalClasses={['text-xl md:text-5xl !font-normal !pb-0']}
+                            text={product.name}
+                        />
+                        <Header
+                            additionalClasses={['!font-light !p-0']}
+                            text="Category"
+                            level={2}
+                        />
+                        <Paragraph text={product.description} additionalClasses={['mt-10 text-lg']} />
+                        <div className="flex flex-col md:flex-row md:items-center md:space-x-16 mt-10">
+                            <Header
+                                text={product.price}
+                                additionalClasses={['text-red !p-0 order-2 md:order-1 mt-3 md:mt-0']}
+                            />
+                            <div className="flex items-center text-2xl font-normal order-1 md:order-2">
+                                Quantity:
+                                <div className="flex items-center md:items-stretch ml-8 font-roboto">
+                                    <button
+                                        type="button"
+                                        className="flex items-center justify-center border
+                                        border-r-0 border-light-gray bg-light-gray py-1 px-3 hover:text-secondary"
+                                    >
+                                        <MinusIcon className="h-5 w-5" aria-hidden="true" />
+                                    </button>
+                                    <button
+                                        type="button"
+                                        className="border-t border-b border-light-gray py-1 px-4"
+                                    >
+                                        5
+                                    </button>
+                                    <span className="relative -mx-px h-5 w-px bg-gray-300 md:hidden" />
+                                    <button
+                                        type="button"
+                                        className="flex items-center justify-center border
+                                        border-r-0 border-light-gray bg-light-gray py-1 px-3 hover:text-secondary"
+                                    >
+                                        <PlusIcon className="h-5 w-5" aria-hidden="true" />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <Button
+                            label="Add to cart"
+                            rounded="none"
+                            additionalClasses={['bg-secondary justify-center w-fit mt-8 text-2xl font-light !px-24']}
+                        />
+                    </div>
+                </div>
+            </div>
+            <Products products={products} additionalClass={['my-5']} headerText="Similar products" />
         </Layout>
     );
 };
@@ -39,6 +108,39 @@ export const pageQuery = graphql`
             productGallery {
                 localFile {
                     publicURL
+                }
+            }
+        }
+        allProduct(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: 4, filter: {slug: {ne: $slug}}) {
+            nodes {
+                name
+                price
+                slug
+                description
+                id
+                productGallery {
+                    extension
+                    url
+                    width
+                    height
+                    localFile {
+                        publicURL
+                        childImageSharp {
+                            gatsbyImageData(layout: FULL_WIDTH)
+                        }
+                    }
+                }
+                productImage {
+                    extension
+                    url
+                    width
+                    height
+                    localFile {
+                        publicURL
+                        childImageSharp {
+                            gatsbyImageData(layout: FULL_WIDTH)
+                        }
+                    }
                 }
             }
         }
