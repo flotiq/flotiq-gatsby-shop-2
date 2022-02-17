@@ -9,7 +9,7 @@ import ImageWithText from '../components/ImageWithText';
 import ImageWithTextBackground from '../assets/bg-image.jpg';
 import CategoriesChoiceBar from '../components/CategoriesChoiceBar';
 
-const ProductsPage = ({ data }) => {
+const ProductsPage = ({ data, pageContext }) => {
     const products = data.allProduct.nodes;
     const categoryTabs = [
         { name: 'Category 1', href: '#', current: true },
@@ -33,8 +33,8 @@ const ProductsPage = ({ data }) => {
                 <ProductCards products={products} additionalClass="my-5" />
                 <Pagination
                     borderVariant="secondary"
-                    numOfPages={10}
-                    page={1}
+                    numOfPages={pageContext.numPages}
+                    page={pageContext.currentPage}
                     rounded="none"
                     variant="secondary"
                     containerAdditionalClasses={['!mt-0 mb-10']}

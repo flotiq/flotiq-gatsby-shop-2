@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import Layout from '../layouts/layout';
 import ImageWithText from '../components/ImageWithText';
 import ImageWithTextBackground from '../assets/bg-image.jpg';
@@ -10,11 +10,9 @@ import BestSellers from '../sections/BestSellers';
 import Products from '../sections/Products';
 import ReviewsSection from '../sections/ReviewsSection';
 import Avatar from '../assets/avatar.png';
-import Contact from '../sections/Contact';
-import Logo from '../assets/planty-logo.svg';
-import contactFormImage from '../assets/contact-form-image.jpg';
 
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
+    const data = useStaticQuery(query);
     const products = data.allProduct.nodes;
     const reviews = [
         { review: 'The best store in our town! plants are always in good condition.',
@@ -55,14 +53,14 @@ const IndexPage = ({ data }) => {
     );
 };
 
-export const pageQuery = graphql`
-    query indexQuery($skip: Int!, $limit: Int!) {
+const query = graphql`
+    query indexQuery {
         site {
             siteMetadata {
                 title
             }
         }
-        allProduct(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: $limit, skip: $skip,) {
+        allProduct(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: 4) {
             nodes {
                 name
                 price

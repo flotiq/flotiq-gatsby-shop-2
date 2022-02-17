@@ -10,21 +10,7 @@ exports.createPages = async ({ graphql, actions }) => {
             allProduct(sort: {order: DESC, fields: flotiqInternal___createdAt}) {
                 edges {
                     node {
-                        name
-                        price
                         slug
-                        description
-                        id
-                        productGallery {
-                            localFile {
-                                publicURL
-                            }
-                        }
-                        productImage {
-                            localFile {
-                                publicURL
-                            }
-                        }
                     }
                 }
             }
@@ -37,13 +23,13 @@ exports.createPages = async ({ graphql, actions }) => {
     const products = result.data.allProduct.edges;
 
     // Create paginated index
-    let productsPerPage = 7;
-    let numPages = Math.ceil(products.length / productsPerPage);
+    const productsPerPage = 12;
+    const numPages = Math.ceil(products.length / productsPerPage);
 
     Array.from({ length: numPages }).forEach((item, i) => {
         createPage({
-            path: i === 0 ? '/' : `/${i + 1}`,
-            component: path.resolve('./src/templates/index.js'),
+            path: i === 0 ? '/products/' : `/products/${i + 1}`,
+            component: productsPage,
             context: {
                 limit: productsPerPage,
                 skip: i * productsPerPage,
@@ -65,23 +51,6 @@ exports.createPages = async ({ graphql, actions }) => {
                 slug: product.node.slug,
                 previous,
                 next,
-            },
-        });
-    });
-
-    // Create products page
-    productsPerPage = 12;
-    numPages = Math.ceil(products.length / productsPerPage);
-
-    Array.from({ length: numPages }).forEach((item, i) => {
-        createPage({
-            path: i === 0 ? '/products/' : `/products/${i + 1}`,
-            component: productsPage,
-            context: {
-                limit: productsPerPage,
-                skip: i * productsPerPage,
-                numPages,
-                currentPage: i + 1,
             },
         });
     });
