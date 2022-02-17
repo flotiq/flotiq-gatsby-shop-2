@@ -1,61 +1,60 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
+import { Header, Pagination } from 'flotiq-components-react';
 import Layout from '../layouts/layout';
+import ProductCards from '../sections/ProductCards';
+import BestSellers from '../sections/BestSellers';
 import ImageWithText from '../components/ImageWithText';
 import ImageWithTextBackground from '../assets/bg-image.jpg';
-import Hero from '../sections/Hero';
-import HeroImage from '../assets/hero-bg.jpg';
-import BestSellers from '../sections/BestSellers';
-import Products from '../sections/Products';
-import ReviewsSection from '../sections/ReviewsSection';
-import Avatar from '../assets/avatar.png';
-import Contact from '../sections/Contact';
-import Logo from '../assets/planty-logo.svg';
-import contactFormImage from '../assets/contact-form-image.jpg';
+import CategoriesChoiceBar from '../components/CategoriesChoiceBar';
 
-const IndexPage = ({ data }) => {
+const ProductsPage = ({ data, pageContext }) => {
     const products = data.allProduct.nodes;
-    const reviews = [
-        { review: 'The best store in our town! plants are always in good condition.',
-            author: 'Joe Jonas' },
-        { review: 'I ordered 3 packs of roses last friday and they all came so fast and fresh',
-            author: 'Kate Smith' },
-        { review: 'The staff was so sweet they helped me decorate my room with plants!',
-            author: 'John Doe' },
+    const categoryTabs = [
+        { name: 'Category 1', href: '#', current: true },
+        { name: 'Category 2', href: '#', current: false },
+        { name: 'Cactus', href: '#', current: false },
+        { name: 'Big Plants', href: '#', current: false },
     ];
     return (
         <Layout additionalClass={['bg-white']}>
             <Helmet>
                 <title>Flotiq Gatsby shop starter</title>
             </Helmet>
-            <Hero
-                headerText="Best Plants for your home"
-                paragraphText="Check our store and find the most beautiful plant for your home"
-                buttonLabel="All the products"
-                heroImage={HeroImage}
-            />
+            <CategoriesChoiceBar additionalClass={['my-5']} categoryTabs={categoryTabs} />
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex items-center justify-between">
+                    <Header
+                        text="Category 1"
+                        additionalClasses={['!text-xl md:!text-3xl !font-normal font-roboto !p-0']}
+                    />
+                </div>
+                <ProductCards products={products} additionalClass="my-5" />
+                <Pagination
+                    borderVariant="secondary"
+                    numOfPages={pageContext.numPages}
+                    page={pageContext.currentPage}
+                    rounded="none"
+                    variant="secondary"
+                    containerAdditionalClasses={['!mt-0 mb-10']}
+                />
+            </div>
             <BestSellers products={products} additionalClass={['bg-green-gray py-14']} headerText="Best sellers" />
-            <Products products={products} additionalClass={['my-5']} headerText="Products" />
-            <ReviewsSection
-                headerText="Reviews"
-                reviews={reviews}
-                avatar={Avatar}
-                additionalClass={['my-10 lg:my-24']}
-            />
             <ImageWithText
                 image={ImageWithTextBackground}
                 headerText1="Buy one"
                 headerText2="plant get"
                 headerText3="one for free"
                 buttonLabel="All the products"
+                additionalClass={['my-10']}
             />
         </Layout>
     );
 };
 
 export const pageQuery = graphql`
-    query indexQuery($skip: Int!, $limit: Int!) {
+    query productsQuery($skip: Int!, $limit: Int!) {
         site {
             siteMetadata {
                 title
@@ -97,4 +96,4 @@ export const pageQuery = graphql`
     }
 `;
 
-export default IndexPage;
+export default ProductsPage;

@@ -21,7 +21,7 @@ const Hero = ({ heroImage, headerText, paragraphText, buttonLabel }) => (
                 <Paragraph text={paragraphText} additionalClasses={['w-full lg:w-1/2 !font-thin !text-2xl lg:mt-5']} />
                 <Button
                     label={buttonLabel}
-                    onClick={() => { navigate('/'); }}
+                    onClick={() => { navigate('/products/'); }}
                     rounded="none"
                     size="md"
                     variant="info"
