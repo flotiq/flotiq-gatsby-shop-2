@@ -11,8 +11,8 @@ require('dotenv').config({
 
 module.exports = {
     siteMetadata: {
-        title: 'Flotiq gatsby starter boilerplate',
-        description: 'Flotiq gatsby starter boilerplate',
+        title: 'Flotiq gatsby shop boilerplate',
+        description: 'Flotiq gatsby shop boilerplate',
         siteUrl: 'https://example.com',
     },
     plugins: [
@@ -85,5 +85,12 @@ module.exports = {
             },
         },
         'gatsby-plugin-postcss',
+        {
+            resolve: "gatsby-plugin-snipcart",
+            options: {
+                apiKey: process.env.SNIPCART_API_KEY,
+                autopop: true,
+            },
+        },
     ],
 };

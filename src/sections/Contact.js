@@ -90,7 +90,7 @@ const Contact = ({
             <div className="w-full md:w-auto flex justify-center mt-10 lg:mt-0">
                 <div className="hidden md:block flex flex-col space-y-1">
                     {socialIcons.social.map((item) => (
-                        <div className="flex items-center space-x-7">
+                        <div className="flex items-center space-x-7" key={item.name}>
                             <a
                                 key={item.name}
                                 href={item.href}
@@ -125,7 +125,7 @@ const Contact = ({
                 <Image url={logoImage} additionalClasses={['h-10 md:h-16 w-auto']} />
                 <div className="flex space-x-6">
                     {socialIcons.social.map((item) => (
-                        <div className="flex items-center">
+                        <div className="flex items-center" key={item.name}>
                             <a
                                 key={item.name}
                                 href={item.href}

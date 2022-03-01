@@ -47,7 +47,7 @@ const Header = () => (
                                 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 relative"
                             >
                                 <span className="sr-only">View notifications</span>
-                                <ShoppingBagIcon className="h-6 w-6" aria-hidden="true" />
+                                <ShoppingBagIcon className="h-6 w-6 snipcart-checkout" aria-hidden="true" />
                                 <span className="absolute h-3 w-3 bottom-0 right-1 bg-red rounded-full" />
                             </button>
                         </div>

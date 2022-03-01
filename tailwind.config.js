@@ -13,13 +13,13 @@ module.exports = {
                 'light-gray': '#F4F4F4',
                 'green-gray': '#E8E9E3',
             },
-        },
-        fontFamily: {
-            roboto: ['Roboto', 'sans-serif'],
-            grotesque: ['Darker Grotesque', 'sans-serif'],
-        },
-        minHeight: {
-            '1/2vh': '50vh',
+            fontFamily: {
+                roboto: ['Roboto', 'sans-serif'],
+                grotesque: ['Darker Grotesque', 'sans-serif'],
+            },
+            minHeight: {
+                '1/2vh': '50vh',
+            },
         },
     },
     presets: [
