@@ -146,6 +146,8 @@ const Contact = ({
                     url={contactFormImage}
                     additionalClasses={['block lg:hidden basis-1/2 w-auto']}
                     alt="Connect with us"
+                    width={1920}
+                    height={1985}
                 />
             </div>
             <div className="basis-full md:basis-1/2 bg-light-gray py-5 px-7 order-1 md:order-2">
