@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { ShoppingBagIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
+import { Link } from 'gatsby';
 import Logo from '../assets/planty-logo.svg';
 
 const Header = () => (
@@ -10,34 +11,34 @@ const Header = () => (
                 <div className="max-w-7xl mx-auto py-1 md:py-6 px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
                         <div className="w-full flex justify-center md:justify-between">
-                            <a href="/" className="flex-shrink-0 flex items-center">
+                            <Link to="/" className="flex-shrink-0 flex items-center">
                                 <img
                                     className="block h-10 md:h-16 w-auto"
                                     src={Logo}
-                                    alt="Workflow"
+                                    alt="Planty"
                                 />
-                            </a>
+                            </Link>
                             <div className="hidden md:ml-6 md:flex md:space-x-16">
-                                <a
-                                    href="/products/"
+                                <Link
+                                    to="/products/"
                                     className="inline-flex items-center px-1 pt-1 text-xl font-medium text-secondary"
                                 >
                                     Store
-                                </a>
-                                <a
-                                    href="/"
+                                </Link>
+                                <Link
+                                    to="/"
                                     className="hover:text-secondary inline-flex items-center
                                     px-1 pt-1 text-xl font-light"
                                 >
                                     About
-                                </a>
-                                <a
-                                    href="/"
+                                </Link>
+                                <Link
+                                    to="/"
                                     className="hover:text-secondary inline-flex items-center
                                     px-1 pt-1 text-xl font-light"
                                 >
                                     FAQ
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="hidden md:ml-14 md:flex md:items-center">
