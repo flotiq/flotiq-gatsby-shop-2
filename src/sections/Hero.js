@@ -31,7 +31,7 @@ const Hero = ({ heroImage, headerText, paragraphText, buttonLabel }) => (
             <div
                 className="w-full lg:basis-6/12 lg:w-auto order-1 lg:order-2 bg-cover bg-center"
             >
-                <Image url={heroImage} additionalClasses={['block lg:hidden w-full']} />
+                <Image url={heroImage} additionalClasses={['block lg:hidden w-full']} alt="Hero" />
             </div>
         </div>
     </div>

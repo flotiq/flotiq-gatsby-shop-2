@@ -5614,10 +5614,10 @@ gatsby-plugin-sitemap@^5.4.0:
     minimatch "^3.0.4"
     sitemap "^7.0.0"
 
-gatsby-plugin-snipcart@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-snipcart/-/gatsby-plugin-snipcart-1.1.2.tgz#ac2e672ae4fec200ecfce81f267e6e95040131a5"
-  integrity sha512-p3qpYVbedxqxWUJ42qhZKF9dbmGwi0mHvUZZ53/FcNoFrp3AeWFah86+YWkgPuERlliQBRUuZoW1gNV13ONnlA==
+gatsby-plugin-snipcartv3@^1.1.2:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-snipcartv3/-/gatsby-plugin-snipcartv3-1.2.5.tgz#f10f32504edb9cf674f69209dce077714a7b87d5"
+  integrity sha512-uDwRhL+qDUgxWqjrisNETCCxb1QYXAXYOq+tQ9/xdiHG2r/++1IeueND+umthc3H+M+ktPDSky8knCVcb1lEoQ==
 
 gatsby-plugin-typescript@^4.4.0:
   version "4.4.0"

@@ -11,9 +11,9 @@ require('dotenv').config({
 
 module.exports = {
     siteMetadata: {
-        title: 'Flotiq gatsby shop boilerplate',
-        description: 'Flotiq gatsby shop boilerplate',
-        siteUrl: 'https://example.com',
+        title: 'Flotiq Gatsby shop starter',
+        description: 'Flotiq Gatsby shop starter',
+        siteUrl: 'https://flotiqgatsbyshop2.gtsb.io',
     },
     plugins: [
         {
@@ -61,8 +61,8 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-robots-txt',
             options: {
-                host: 'https://your-domain.com',
-                sitemap: 'https://your-domain.com/sitemap.xml',
+                host: 'https://flotiqgatsbyshop2.gtsb.io',
+                sitemap: 'https://flotiqgatsbyshop2.gtsb.io/sitemap.xml',
                 policy: [{ userAgent: '*', allow: '/' }],
             },
         },
@@ -86,7 +86,7 @@ module.exports = {
         },
         'gatsby-plugin-postcss',
         {
-            resolve: "gatsby-plugin-snipcart",
+            resolve: 'gatsby-plugin-snipcartv3',
             options: {
                 apiKey: process.env.SNIPCART_API_KEY,
                 autopop: true,

@@ -27,6 +27,7 @@ const ProductTemplate = ({ data }) => {
                         <Image
                             url={product.productImage[0] && product.productImage[0].localFile.publicURL}
                             additionalClasses={['w-full lg:hidden']}
+                            alt={product.name}
                         />
                     </div>
                     <div className="flex flex-col basis-full lg:basis-1/2 pl-0 lg:pl-12 pt-5 pb-10 bg-white">

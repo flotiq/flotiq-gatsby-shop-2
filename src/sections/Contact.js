@@ -86,7 +86,7 @@ const Contact = ({
         <div className="basis-full lg:basis-1/2 flex flex-col items-start
         justify-between order-2 lg:order-1 md:mt-10 lg:mt-0"
         >
-            <Image url={logoImage} additionalClasses={['hidden md:block h-10 md:h-16 w-auto']} />
+            <Image url={logoImage} additionalClasses={['hidden md:block h-10 md:h-16 w-auto']} alt="Planty logo" />
             <div className="w-full md:w-auto flex justify-center mt-10 lg:mt-0">
                 <div className="hidden md:block flex flex-col space-y-1">
                     {socialIcons.social.map((item) => (
@@ -143,7 +143,11 @@ const Contact = ({
                 className="basis-full md:basis-1/2 bg-cover bg-center order-2 md:order-1"
                 style={{ backgroundImage: `url('${contactFormImage}')` }}
             >
-                <Image url={contactFormImage} additionalClasses={['block lg:hidden basis-1/2 w-auto']} />
+                <Image
+                    url={contactFormImage}
+                    additionalClasses={['block lg:hidden basis-1/2 w-auto']}
+                    alt="Connect with us"
+                />
             </div>
             <div className="basis-full md:basis-1/2 bg-light-gray py-5 px-7 order-1 md:order-2">
                 <Header text={formHeaderText} additionalClasses={['!font-light !text-4xl !p-0 mb-5']} />
