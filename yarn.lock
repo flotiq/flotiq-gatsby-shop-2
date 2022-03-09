@@ -1138,10 +1138,20 @@
   resolved "https://registry.npmjs.org/@fontsource/darker-grotesque/-/darker-grotesque-4.5.1.tgz"
   integrity sha512-pbRusQuhh7SrNDyzBlk/3p/nskxNzzysDXp6+Kxm/KJihL/EHIOIFnKqkOmY7ZuzDOY1/pg+VnVwbFHlPSuG4A==
 
+"@fontsource/inter@^4.5.4":
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.4.tgz#d6906fdaaf81242d975a1f9b6dedab7bfba77997"
+  integrity sha512-D0icTFpt9bWvB/OEXMztYf0bhUQZoDIYpsco5C7GVfxgKDRl8Jdn3N2aHHQqwjgRUUvRuyMv8HrRM8Hrt4U52w==
+
 "@fontsource/roboto@^4.5.3":
   version "4.5.3"
-  resolved "https://registry.npmjs.org/@fontsource/roboto/-/roboto-4.5.3.tgz"
+  resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-4.5.3.tgz#c729ac22c35ae1c224cde10042ce7ab356bc4dda"
   integrity sha512-NUvBTj332dFRdiVkLlavXbDGoD2zyyeGYmMyrXOnctg/3e4pq95+rJgNfUP+k4v8UBk2L1aomGw9dDjbRdAmTg==
+
+"@fontsource/sora@^4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/sora/-/sora-4.5.3.tgz#987c9b43acb00c9e3fa5377ebcedfd4ec9b760a7"
+  integrity sha512-0ipYkroLonvChAyLajgIt6mImXMhvjrHwD5g7iX2ZR1eJ4hLDnwq6haW5pSeehe79lPjgp0BX6ZHivFIP0xR2g==
 
 "@gatsbyjs/reach-router@^1.3.6":
   version "1.3.6"
@@ -5279,10 +5289,10 @@ flatted@^3.1.0:
   resolved "https://registry.npmjs.org/flatted/-/flatted-3.2.4.tgz"
   integrity sha512-8/sOawo8tJ4QOBX8YlQBMxL8+RLZfxMQOif9o0KUKTNTjMYElWPE0r/m5VNFxTRd0NSw8qSy8dajrwX4RYI1Hw==
 
-flotiq-components-react@^0.4.13:
-  version "0.4.13"
-  resolved "https://registry.yarnpkg.com/flotiq-components-react/-/flotiq-components-react-0.4.13.tgz#fe846ad45d87fc245dbb3923bb7ff06c380bb97f"
-  integrity sha512-ABXzQiPFRua6l6o4JsrGwXr67XBB5srcdscbtwPFDiO3jYjO496zVG1ejoEVE27RrKB9d8cwJUM9jLCby8UcVg==
+flotiq-components-react@^0.4.14:
+  version "0.4.14"
+  resolved "https://registry.yarnpkg.com/flotiq-components-react/-/flotiq-components-react-0.4.14.tgz#5995e69ffdef7249f6bcb9b5a7149db947daa036"
+  integrity sha512-L6W3Nm5Z0C3kNHDksOMoNh02KM07SORP4Ewy8NdYJTpMyqj2rTDhU9UG69giP2xMUH7eqe8J3LAcWPkOKIuyow==
 
 follow-redirects@^1.0.0, follow-redirects@^1.14.0:
   version "1.14.7"

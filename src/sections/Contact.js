@@ -5,7 +5,7 @@ const socialIcons = {
     social: [
         {
             name: 'Facebook',
-            href: '#',
+            href: 'https://www.facebook.com/flotiq',
             icon: (props) => (
                 <svg fill="currentColor" viewBox="0 0 13 25" {...props}>
                     <path
@@ -49,7 +49,7 @@ const socialIcons = {
         },
         {
             name: 'Youtube',
-            href: '#',
+            href: 'https://www.youtube.com/channel/UC4wpV-D9mIt1JjN_g_iyXXw',
             icon: (props) => (
                 <svg fill="currentColor" viewBox="0 0 48 48" {...props}>
                     <path
@@ -90,16 +90,15 @@ const Contact = ({
             <div className="w-full md:w-auto flex justify-center mt-10 lg:mt-0">
                 <div className="hidden md:block flex flex-col space-y-1">
                     {socialIcons.social.map((item) => (
-                        <div className="flex items-center space-x-7" key={item.name}>
-                            <a
+                        <a className="flex items-center space-x-7" key={item.name} href={item.href}>
+                            <span
                                 key={item.name}
-                                href={item.href}
                                 className="text-gray p-2 bg-light-gray"
                             >
                                 <item.icon className="h-6 w-6" aria-hidden="true" />
-                            </a>
+                            </span>
                             <p className="text-xl font-light">{item.name}</p>
-                        </div>
+                        </a>
                     ))}
                 </div>
                 <div className="flex flex-col space-y-1 md:pl-24">
@@ -122,7 +121,7 @@ const Contact = ({
                 </div>
             </div>
             <div className="w-full md:hidden flex items-center justify-between mt-10">
-                <Image url={logoImage} additionalClasses={['h-10 md:h-16 w-auto']} />
+                <Image url={logoImage} additionalClasses={['h-10 md:h-16 w-auto']} alt="Planty logo" />
                 <div className="flex space-x-6">
                     {socialIcons.social.map((item) => (
                         <div className="flex items-center" key={item.name}>
