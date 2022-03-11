@@ -15,6 +15,10 @@ const ProductTemplate = ({ data }) => {
         <Layout additionalClass={['bg-white']}>
             <Helmet>
                 <title>{product.name}</title>
+                <meta
+                    name="description"
+                    content={product.description}
+                />
             </Helmet>
             <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <ProductBackButton additionalClass={['mt-12 mb-5']} backButtonText="Back to all products" />
