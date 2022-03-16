@@ -96,7 +96,7 @@ const Header = () => (
                         <button
                             type="button"
                             className="ml-2 bg-white p-1 rounded-full text-secondary hover:text-gray focus:outline-none
-                                focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 snipcart-checkout"
                         >
                             <span className="sr-only">View notifications</span>
                             <ShoppingBagIcon className="h-6 w-6" aria-hidden="true" />
