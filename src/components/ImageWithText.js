@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Header } from 'flotiq-components-react';
+import { navigate } from 'gatsby';
 
 const ImageWithText = ({ image, headerText1, headerText2, headerText3, buttonLabel, additionalClass }) => (
     <div className={['max-w-7xl mx-auto px-0 lg:px-8', ...additionalClass].join(' ')}>
@@ -22,6 +23,7 @@ const ImageWithText = ({ image, headerText1, headerText2, headerText3, buttonLab
                 <Button
                     label={buttonLabel}
                     rounded="none"
+                    onClick={() => { navigate('/products/'); }}
                     additionalClasses={['mt-5 md:mt-10 bg-white text-secondary']}
                 />
             </div>

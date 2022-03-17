@@ -1,5 +1,4 @@
 import React from 'react';
-import { navigate } from 'gatsby';
 import ProductCard from '../components/ProductCard';
 
 const ProductCards = ({ products, additionalClass }) => (
@@ -9,7 +8,6 @@ const ProductCards = ({ products, additionalClass }) => (
         {products.map((product) => (
             <ProductCard
                 key={product.id}
-                onClick={() => { navigate(`/${product.slug}`); }}
                 name={product.name}
                 description={product.description}
                 price={product.price}

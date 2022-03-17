@@ -5,7 +5,7 @@ const socialIcons = {
     social: [
         {
             name: 'Facebook',
-            href: '#',
+            href: 'https://www.facebook.com/flotiq',
             icon: (props) => (
                 <svg fill="currentColor" viewBox="0 0 13 25" {...props}>
                     <path
@@ -49,7 +49,7 @@ const socialIcons = {
         },
         {
             name: 'Youtube',
-            href: '#',
+            href: 'https://www.youtube.com/channel/UC4wpV-D9mIt1JjN_g_iyXXw',
             icon: (props) => (
                 <svg fill="currentColor" viewBox="0 0 48 48" {...props}>
                     <path
@@ -86,20 +86,19 @@ const Contact = ({
         <div className="basis-full lg:basis-1/2 flex flex-col items-start
         justify-between order-2 lg:order-1 md:mt-10 lg:mt-0"
         >
-            <Image url={logoImage} additionalClasses={['hidden md:block h-10 md:h-16 w-auto']} />
+            <Image url={logoImage} additionalClasses={['hidden md:block h-10 md:h-16 w-auto']} alt="Planty logo" />
             <div className="w-full md:w-auto flex justify-center mt-10 lg:mt-0">
                 <div className="hidden md:block flex flex-col space-y-1">
                     {socialIcons.social.map((item) => (
-                        <div className="flex items-center space-x-7">
-                            <a
+                        <a className="flex items-center space-x-7" key={item.name} href={item.href}>
+                            <span
                                 key={item.name}
-                                href={item.href}
                                 className="text-gray p-2 bg-light-gray"
                             >
                                 <item.icon className="h-6 w-6" aria-hidden="true" />
-                            </a>
+                            </span>
                             <p className="text-xl font-light">{item.name}</p>
-                        </div>
+                        </a>
                     ))}
                 </div>
                 <div className="flex flex-col space-y-1 md:pl-24">
@@ -122,10 +121,10 @@ const Contact = ({
                 </div>
             </div>
             <div className="w-full md:hidden flex items-center justify-between mt-10">
-                <Image url={logoImage} additionalClasses={['h-10 md:h-16 w-auto']} />
+                <Image url={logoImage} additionalClasses={['h-10 md:h-16 w-auto']} alt="Planty logo" />
                 <div className="flex space-x-6">
                     {socialIcons.social.map((item) => (
-                        <div className="flex items-center">
+                        <div className="flex items-center" key={item.name}>
                             <a
                                 key={item.name}
                                 href={item.href}
@@ -143,7 +142,13 @@ const Contact = ({
                 className="basis-full md:basis-1/2 bg-cover bg-center order-2 md:order-1"
                 style={{ backgroundImage: `url('${contactFormImage}')` }}
             >
-                <Image url={contactFormImage} additionalClasses={['block lg:hidden basis-1/2 w-auto']} />
+                <Image
+                    url={contactFormImage}
+                    additionalClasses={['block lg:hidden basis-1/2 w-auto']}
+                    alt="Connect with us"
+                    width={1920}
+                    height={1985}
+                />
             </div>
             <div className="basis-full md:basis-1/2 bg-light-gray py-5 px-7 order-1 md:order-2">
                 <Header text={formHeaderText} additionalClasses={['!font-light !text-4xl !p-0 mb-5']} />
