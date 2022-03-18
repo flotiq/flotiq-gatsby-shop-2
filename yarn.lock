@@ -1138,10 +1138,20 @@
   resolved "https://registry.npmjs.org/@fontsource/darker-grotesque/-/darker-grotesque-4.5.1.tgz"
   integrity sha512-pbRusQuhh7SrNDyzBlk/3p/nskxNzzysDXp6+Kxm/KJihL/EHIOIFnKqkOmY7ZuzDOY1/pg+VnVwbFHlPSuG4A==
 
+"@fontsource/inter@^4.5.4":
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.4.tgz#d6906fdaaf81242d975a1f9b6dedab7bfba77997"
+  integrity sha512-D0icTFpt9bWvB/OEXMztYf0bhUQZoDIYpsco5C7GVfxgKDRl8Jdn3N2aHHQqwjgRUUvRuyMv8HrRM8Hrt4U52w==
+
 "@fontsource/roboto@^4.5.3":
   version "4.5.3"
-  resolved "https://registry.npmjs.org/@fontsource/roboto/-/roboto-4.5.3.tgz"
+  resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-4.5.3.tgz#c729ac22c35ae1c224cde10042ce7ab356bc4dda"
   integrity sha512-NUvBTj332dFRdiVkLlavXbDGoD2zyyeGYmMyrXOnctg/3e4pq95+rJgNfUP+k4v8UBk2L1aomGw9dDjbRdAmTg==
+
+"@fontsource/sora@^4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/sora/-/sora-4.5.3.tgz#987c9b43acb00c9e3fa5377ebcedfd4ec9b760a7"
+  integrity sha512-0ipYkroLonvChAyLajgIt6mImXMhvjrHwD5g7iX2ZR1eJ4hLDnwq6haW5pSeehe79lPjgp0BX6ZHivFIP0xR2g==
 
 "@gatsbyjs/reach-router@^1.3.6":
   version "1.3.6"
@@ -5279,10 +5289,10 @@ flatted@^3.1.0:
   resolved "https://registry.npmjs.org/flatted/-/flatted-3.2.4.tgz"
   integrity sha512-8/sOawo8tJ4QOBX8YlQBMxL8+RLZfxMQOif9o0KUKTNTjMYElWPE0r/m5VNFxTRd0NSw8qSy8dajrwX4RYI1Hw==
 
-flotiq-components-react@^0.4.7:
-  version "0.4.7"
-  resolved "https://registry.yarnpkg.com/flotiq-components-react/-/flotiq-components-react-0.4.7.tgz#24791d16bd65c7b5857dd36219ff9af9b43e82a5"
-  integrity sha512-ekz98sPHnUKOvcm3Yxe8CQaPbxTtrqnCet/L4EO0BOLKiKXL3BUwdARWnJz/OM29fDkqVcFdqXCB1FRnna6OfA==
+flotiq-components-react@^0.4.14:
+  version "0.4.14"
+  resolved "https://registry.yarnpkg.com/flotiq-components-react/-/flotiq-components-react-0.4.14.tgz#5995e69ffdef7249f6bcb9b5a7149db947daa036"
+  integrity sha512-L6W3Nm5Z0C3kNHDksOMoNh02KM07SORP4Ewy8NdYJTpMyqj2rTDhU9UG69giP2xMUH7eqe8J3LAcWPkOKIuyow==
 
 follow-redirects@^1.0.0, follow-redirects@^1.14.0:
   version "1.14.7"
@@ -5614,6 +5624,13 @@ gatsby-plugin-sitemap@^5.4.0:
     minimatch "^3.0.4"
     sitemap "^7.0.0"
 
+gatsby-plugin-snipcart-advanced@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-snipcart-advanced/-/gatsby-plugin-snipcart-advanced-1.0.3.tgz#ac886c7ff5350f891ca992179f50d27b2afd19d8"
+  integrity sha512-jlfMm6FN8dJU+EHDWyj4qBG7DldKjypE9KeDX9c4m5g+vPJD4t/Ri/WUGlabqGY4chklWFOtDkZ5ChLr/iVFHQ==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+
 gatsby-plugin-typescript@^4.4.0:
   version "4.4.0"
   resolved "https://registry.npmjs.org/gatsby-plugin-typescript/-/gatsby-plugin-typescript-4.4.0.tgz"
@@ -5726,14 +5743,14 @@ gatsby-source-filesystem@^4.4.0:
     valid-url "^1.0.9"
     xstate "^4.26.1"
 
-gatsby-source-flotiq@^4.1.3:
-  version "4.1.3"
-  resolved "https://registry.npmjs.org/gatsby-source-flotiq/-/gatsby-source-flotiq-4.1.3.tgz"
-  integrity sha512-8D6iG2Uc0P0pQiZNyD8bJ4wQ60cQbf5Vsi46TC6U/CodXkjIOzUSjknw0Geq9DO1rzy4w7g9m8XNFnMWuJ0bFg==
+gatsby-source-flotiq@^4.1.5:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/gatsby-source-flotiq/-/gatsby-source-flotiq-4.1.5.tgz#f20ecfb0b916eb62ac8a6399fa2cc89b0f786684"
+  integrity sha512-Pa2OH0Pj1RfSijro7K8QglWU4c9GTj2lt3Jn+oTlzXvNeuNdPLFH6meDuVcfPznaexvlBX5b45sosKM8HtHZjg==
   dependencies:
     gatsby-core-utils "^3.4.0"
     gatsby-source-filesystem "^4.4.0"
-    node-fetch "^2.6.6"
+    node-fetch "^2.6.7"
 
 gatsby-telemetry@^3.4.0:
   version "3.4.0"
@@ -7999,6 +8016,13 @@ node-fetch@^2.5.0, node-fetch@^2.6.1, node-fetch@^2.6.6:
   version "2.6.6"
   resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.6.tgz"
   integrity sha512-Z8/6vRlTUChSdIgMa51jxQ4lrw/Jy5SOW10ObaA47/RElsAN2c5Pn8bTgFGWn/ibwzXTE8qwr1Yzx28vsecXEA==
+  dependencies:
+    whatwg-url "^5.0.0"
+
+node-fetch@^2.6.7:
+  version "2.6.7"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
+  integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
   dependencies:
     whatwg-url "^5.0.0"
 

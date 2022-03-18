@@ -25,7 +25,11 @@ const IndexPage = () => {
     return (
         <Layout additionalClass={['bg-white']}>
             <Helmet>
-                <title>Flotiq Gatsby shop starter</title>
+                <title>{data.site.siteMetadata.title}</title>
+                <meta
+                    name="description"
+                    content={data.site.siteMetadata.description}
+                />
             </Helmet>
             <Hero
                 headerText="Best Plants for your home"
@@ -58,6 +62,7 @@ const query = graphql`
         site {
             siteMetadata {
                 title
+                description
             }
         }
         allProduct(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: 4) {

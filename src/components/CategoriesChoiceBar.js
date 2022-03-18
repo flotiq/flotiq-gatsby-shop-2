@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 const CategoriesChoiceBar = ({ additionalClass, categoryTabs }) => {
     function classNames(...classes) {
@@ -29,9 +30,9 @@ const CategoriesChoiceBar = ({ additionalClass, categoryTabs }) => {
             <div className="w-full hidden sm:block">
                 <nav className="w-full -mb-px flex justify-between" aria-label="Tabs">
                     {categoryTabs.map((tab) => (
-                        <a
+                        <Link
                             key={tab.name}
-                            href={tab.href}
+                            to={tab.href}
                             className={classNames(
                                 tab.current
                                     ? 'underline !font-semibold text-primary hover:text-gray-700 '
@@ -41,7 +42,7 @@ const CategoriesChoiceBar = ({ additionalClass, categoryTabs }) => {
                             aria-current={tab.current ? 'page' : undefined}
                         >
                             {tab.name}
-                        </a>
+                        </Link>
                     ))}
                 </nav>
             </div>
