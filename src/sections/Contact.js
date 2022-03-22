@@ -1,5 +1,7 @@
 import React from 'react';
 import { Button, Header, Image } from 'flotiq-components-react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const socialIcons = {
     social: [
@@ -79,134 +81,145 @@ const Contact = ({
     phoneNumber,
     address,
     emailAddress,
-}) => (
-    <div className={['flex flex-wrap max-w-7xl mx-auto '
-    + 'py-1 md:py-6 px-4 sm:px-6 lg:px-8', ...additionalClass].join(' ')}
-    >
-        <div className="basis-full lg:basis-1/2 flex flex-col items-start
-        justify-between order-2 lg:order-1 md:mt-10 lg:mt-0"
+}) => {
+    const data = useStaticQuery(query);
+    return (
+        <div className={['flex flex-wrap max-w-7xl mx-auto '
+        + 'py-1 md:py-6 px-4 sm:px-6 lg:px-8', ...additionalClass].join(' ')}
         >
-            <Image url={logoImage} additionalClasses={['hidden md:block h-10 md:h-16 w-auto']} alt="Planty logo" />
-            <div className="w-full md:w-auto flex justify-center mt-10 lg:mt-0">
-                <div className="hidden md:block flex flex-col space-y-1">
-                    {socialIcons.social.map((item) => (
-                        <a className="flex items-center space-x-7" key={item.name} href={item.href}>
-                            <span
-                                key={item.name}
-                                className="text-gray p-2 bg-light-gray"
-                            >
-                                <item.icon className="h-6 w-6" aria-hidden="true" />
-                            </span>
-                            <p className="text-xl font-light">{item.name}</p>
-                        </a>
-                    ))}
-                </div>
-                <div className="flex flex-col space-y-1 md:pl-24">
-                    <p className="h-10 p-1 text-xl font-light">
-                        Phone:
-                        <a href="/" className="font-normal ml-5">
-                            {phoneNumber}
-                        </a>
-                    </p>
-                    <p className="h-10 p-1 text-xl font-light">
-                        Address:
-                        <span className="font-normal ml-5">{address}</span>
-                    </p>
-                    <p className="h-10 p-1 text-xl font-light">
-                        Email:
-                        <a href="/" className="font-normal ml-5">
-                            {emailAddress}
-                        </a>
-                    </p>
-                </div>
-            </div>
-            <div className="w-full md:hidden flex items-center justify-between mt-10">
-                <Image url={logoImage} additionalClasses={['h-10 md:h-16 w-auto']} alt="Planty logo" />
-                <div className="flex space-x-6">
-                    {socialIcons.social.map((item) => (
-                        <div className="flex items-center" key={item.name}>
-                            <a
-                                key={item.name}
-                                href={item.href}
-                                className="text-gray p-2"
-                            >
-                                <item.icon className="h-6 w-6" aria-hidden="true" />
-                            </a>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div>
-        <div className="basis-full lg:basis-1/2 flex flex-wrap order-1 lg:order-2">
-            <div
-                className="basis-full md:basis-1/2 bg-cover bg-center order-2 md:order-1"
-                style={{ backgroundImage: `url('${contactFormImage}')` }}
+            <div className="basis-full lg:basis-1/2 flex flex-col items-start
+        justify-between order-2 lg:order-1 md:mt-10 lg:mt-0"
             >
-                <Image
-                    url={contactFormImage}
-                    additionalClasses={['block lg:hidden basis-1/2 w-auto']}
-                    alt="Connect with us"
-                    width={1920}
-                    height={1985}
-                />
+                <Image url={logoImage} additionalClasses={['hidden md:block h-10 md:h-16 w-auto']} alt="Planty logo" />
+                <div className="w-full md:w-auto flex justify-center mt-10 lg:mt-0">
+                    <div className="hidden md:block flex flex-col space-y-1">
+                        {socialIcons.social.map((item) => (
+                            <a className="flex items-center space-x-7" key={item.name} href={item.href}>
+                                <span
+                                    key={item.name}
+                                    className="text-gray p-2 bg-light-gray"
+                                >
+                                    <item.icon className="h-6 w-6" aria-hidden="true" />
+                                </span>
+                                <p className="text-xl font-light">{item.name}</p>
+                            </a>
+                        ))}
+                    </div>
+                    <div className="flex flex-col space-y-1 md:pl-24">
+                        <p className="h-10 p-1 text-xl font-light">
+                            Phone:
+                            <a href="/" className="font-normal ml-5">
+                                {phoneNumber}
+                            </a>
+                        </p>
+                        <p className="h-10 p-1 text-xl font-light">
+                            Address:
+                            <span className="font-normal ml-5">{address}</span>
+                        </p>
+                        <p className="h-10 p-1 text-xl font-light">
+                            Email:
+                            <a href="/" className="font-normal ml-5">
+                                {emailAddress}
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div className="w-full md:hidden flex items-center justify-between mt-10">
+                    <Image url={logoImage} additionalClasses={['h-10 md:h-16 w-auto']} alt="Planty logo" />
+                    <div className="flex space-x-6">
+                        {socialIcons.social.map((item) => (
+                            <div className="flex items-center" key={item.name}>
+                                <a
+                                    key={item.name}
+                                    href={item.href}
+                                    className="text-gray p-2"
+                                >
+                                    <item.icon className="h-6 w-6" aria-hidden="true" />
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
-            <div className="basis-full md:basis-1/2 bg-light-gray py-5 px-7 order-1 md:order-2">
-                <Header text={formHeaderText} additionalClasses={['!font-light !text-4xl !p-0 mb-5']} />
-                <form
-                    action="#"
-                    method="POST"
-                    className="font-sora font-light flex flex-col space-y-2 basis-full md:basis-1/2 lg:basis-7/12"
+            <div className="basis-full lg:basis-1/2 flex flex-wrap order-1 lg:order-2">
+                <div
+                    className="basis-full md:basis-1/2 order-2 md:order-1"
                 >
-                    <div>
-                        <label htmlFor="full-name" className="sr-only">
-                            {nameInputLabel}
-                        </label>
-                        <input
-                            type="text"
-                            name="full-name"
-                            id="full-name"
-                            autoComplete="name"
-                            className="block w-full py-3 px-4 placeholder-primary/50
-                            placeholder:font-light placeholder:text-lg border-0"
-                            placeholder="Name"
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="email" className="sr-only">
-                            {emailInputLabel}
-                        </label>
-                        <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            autoComplete="email"
-                            className="block w-full py-3 px-4 placeholder-primary/50
-                            placeholder:font-light placeholder:text-lg border-0"
-                            placeholder="Email"
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="message" className="sr-only">
-                            {messageInputLabel}
-                        </label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows={2}
-                            className="block w-full py-3 px-4 placeholder-primary/50
-                            placeholder:font-light placeholder:text-lg border-0"
-                            placeholder="Message"
-                        />
-                    </div>
-                    <Button
-                        label={buttonLabel}
-                        rounded="none"
-                        additionalClasses={['text-xl font-light text-white bg-secondary w-full justify-center']}
+                    <GatsbyImage
+                        image={getImage(data.file)}
+                        className="block basis-1/2 w-auto h-full"
+                        alt="Connect with us"
+                        objectFit="cover"
                     />
-                </form>
+                </div>
+                <div className="basis-full md:basis-1/2 bg-light-gray py-5 px-7 order-1 md:order-2">
+                    <Header text={formHeaderText} additionalClasses={['!font-light !text-4xl !p-0 mb-5']} />
+                    <form
+                        action="#"
+                        method="POST"
+                        className="font-sora font-light flex flex-col space-y-2 basis-full md:basis-1/2 lg:basis-7/12"
+                    >
+                        <div>
+                            <label htmlFor="full-name" className="sr-only">
+                                {nameInputLabel}
+                            </label>
+                            <input
+                                type="text"
+                                name="full-name"
+                                id="full-name"
+                                autoComplete="name"
+                                className="block w-full py-3 px-4 placeholder-primary/50
+                            placeholder:font-light placeholder:text-lg border-0"
+                                placeholder="Name"
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="email" className="sr-only">
+                                {emailInputLabel}
+                            </label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                autoComplete="email"
+                                className="block w-full py-3 px-4 placeholder-primary/50
+                            placeholder:font-light placeholder:text-lg border-0"
+                                placeholder="Email"
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="message" className="sr-only">
+                                {messageInputLabel}
+                            </label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows={2}
+                                className="block w-full py-3 px-4 placeholder-primary/50
+                            placeholder:font-light placeholder:text-lg border-0"
+                                placeholder="Message"
+                            />
+                        </div>
+                        <Button
+                            label={buttonLabel}
+                            rounded="none"
+                            additionalClasses={['text-xl font-light text-white bg-secondary w-full justify-center']}
+                        />
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-);
+    );
+};
+
+const query = graphql`
+    query contactQuery {
+        file(name: {eq: "contact-form-image"}) {
+            childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH)
+            }
+        }
+    }
+`;
 
 export default Contact;

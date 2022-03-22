@@ -16,7 +16,6 @@ const Layout = ({ children, additionalClass = [] }) => (
         <Contact
             logoImage={Logo}
             additionalClass={['my-5']}
-            contactFormImage={contactFormImage}
             formHeaderText="Connect with us"
             nameInputLabel="Name"
             emailInputLabel="Email"
