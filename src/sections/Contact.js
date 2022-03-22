@@ -71,7 +71,6 @@ const socialIcons = {
 
 const Contact = ({
     logoImage,
-    contactFormImage,
     additionalClass,
     formHeaderText,
     nameInputLabel,
@@ -90,7 +89,13 @@ const Contact = ({
             <div className="basis-full lg:basis-1/2 flex flex-col items-start
         justify-between order-2 lg:order-1 md:mt-10 lg:mt-0"
             >
-                <Image url={logoImage} additionalClasses={['hidden md:block h-10 md:h-16 w-auto']} alt="Planty logo" />
+                <Image
+                    url={logoImage}
+                    additionalClasses={['hidden md:block h-10 md:h-16 w-auto']}
+                    alt="Planty logo"
+                    width={157.7}
+                    height={63}
+                />
                 <div className="w-full md:w-auto flex justify-center mt-10 lg:mt-0">
                     <div className="hidden md:block flex flex-col space-y-1">
                         {socialIcons.social.map((item) => (
@@ -125,7 +130,13 @@ const Contact = ({
                     </div>
                 </div>
                 <div className="w-full md:hidden flex items-center justify-between mt-10">
-                    <Image url={logoImage} additionalClasses={['h-10 md:h-16 w-auto']} alt="Planty logo" />
+                    <Image
+                        url={logoImage}
+                        additionalClasses={['h-10 md:h-16 w-auto']}
+                        alt="Planty logo"
+                        width={157.7}
+                        height={63}
+                    />
                     <div className="flex space-x-6">
                         {socialIcons.social.map((item) => (
                             <div className="flex items-center" key={item.name}>
