@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Header, Image, Paragraph } from 'flotiq-components-react';
+import { Button, Header, Paragraph } from 'flotiq-components-react';
 import { navigate } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const Hero = ({ heroImage, headerText, paragraphText, buttonLabel }) => (
     <div className="w-full relative">
@@ -29,14 +30,12 @@ const Hero = ({ heroImage, headerText, paragraphText, buttonLabel }) => (
                 />
             </div>
             <div
-                className="w-full lg:basis-6/12 lg:w-auto order-1 lg:order-2 bg-cover bg-center"
+                className="w-full lg:basis-6/12 lg:w-auto order-1 lg:order-2"
             >
-                <Image
-                    url={heroImage}
-                    additionalClasses={['block lg:hidden w-full']}
+                <GatsbyImage
+                    image={getImage(heroImage)}
                     alt="Hero"
-                    width={1920}
-                    height={1209}
+                    className="block w-full lg:absolute lg:right-0 lg:w-1/2 h-full"
                 />
             </div>
         </div>

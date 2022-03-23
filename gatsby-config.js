@@ -55,6 +55,13 @@ module.exports = {
                 path: `${__dirname}/gatsby-config.js`,
             },
         },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: 'assets',
+                path: `${__dirname}/src/assets`,
+            },
+        },
         'gatsby-plugin-image',
         'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',

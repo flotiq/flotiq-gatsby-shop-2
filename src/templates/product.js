@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { graphql } from 'gatsby';
-import { Image, Paragraph, Header, Button } from 'flotiq-components-react';
+import { Paragraph, Header, Button } from 'flotiq-components-react';
 import { PlusIcon, MinusIcon } from '@heroicons/react/solid';
 import { Helmet } from 'react-helmet';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Layout from '../layouts/layout';
 import Products from '../sections/Products';
 import ProductBackButton from '../components/ProductBackButton';
@@ -24,13 +25,11 @@ const ProductTemplate = ({ data }) => {
                 <ProductBackButton additionalClass={['mt-12 mb-5']} backButtonText="Back to all products" />
                 <div className="flex flex-wrap mb-10">
                     <div
-                        className="flex basis-full lg:basis-1/2 bg-cover bg-center"
-                        style={{ backgroundImage:
-                                `url('${product.productImage[0] && product.productImage[0].localFile.publicURL}')` }}
+                        className="flex basis-full lg:basis-1/2"
                     >
-                        <Image
-                            url={product.productImage[0] && product.productImage[0].localFile.publicURL}
-                            additionalClasses={['w-full lg:hidden']}
+                        <GatsbyImage
+                            image={getImage(product.productImage[0] && product.productImage[0].localFile)}
+                            className="w-full"
                             alt={product.name}
                         />
                     </div>

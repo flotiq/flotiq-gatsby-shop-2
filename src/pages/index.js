@@ -5,7 +5,6 @@ import Layout from '../layouts/layout';
 import ImageWithText from '../components/ImageWithText';
 import ImageWithTextBackground from '../assets/bg-image.jpg';
 import Hero from '../sections/Hero';
-import HeroImage from '../assets/hero-bg.jpg';
 import BestSellers from '../sections/BestSellers';
 import Products from '../sections/Products';
 import ReviewsSection from '../sections/ReviewsSection';
@@ -35,7 +34,7 @@ const IndexPage = () => {
                 headerText="Best Plants for your home"
                 paragraphText="Check our store and find the most beautiful plant for your home"
                 buttonLabel="All the products"
-                heroImage={HeroImage}
+                heroImage={data.heroImage}
             />
             <BestSellers products={products} additionalClass={['bg-green-gray py-14']} headerText="Best sellers" />
             <Products products={products} additionalClass={['my-5']} headerText="Products" />
@@ -96,6 +95,11 @@ const query = graphql`
                         }
                     }
                 }
+            }
+        }
+        heroImage: file(name: {eq: "hero-bg"}) {
+            childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH)
             }
         }
     }

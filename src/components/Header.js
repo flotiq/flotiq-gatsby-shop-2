@@ -16,6 +16,8 @@ const Header = () => (
                                     className="block h-10 md:h-16 w-auto"
                                     src={Logo}
                                     alt="Planty"
+                                    width={157.7}
+                                    height={63}
                                 />
                             </Link>
                             <div className="hidden md:ml-6 md:flex md:space-x-16">
