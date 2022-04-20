@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Header } from 'flotiq-components-react';
 import Logo from '../assets/Logo.svg';
 
 const NotFoundPage = () => (
@@ -10,7 +11,7 @@ const NotFoundPage = () => (
         <div className="text-center mt-5 mb-5">
             <img src={Logo} alt="Flotiq" width="300px" />
         </div>
-        <h1 className="text-center mt-5 mb-5">Page not found, sorry</h1>
+        <Header className="text-center mt-5 mb-5">Page not found, sorry</Header>
     </main>
 );
 
