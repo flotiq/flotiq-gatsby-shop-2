@@ -30,9 +30,10 @@ const ProductsPage = ({ data, pageContext }) => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between">
                     <Header
-                        text="Category 1"
                         additionalClasses={['!text-xl md:!text-3xl !font-normal font-roboto !p-0']}
-                    />
+                    >
+                        Category 1
+                    </Header>
                 </div>
                 <ProductCards products={products} additionalClass="my-5" />
                 <Pagination

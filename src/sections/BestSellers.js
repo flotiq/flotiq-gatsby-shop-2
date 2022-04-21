@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, navigate } from 'gatsby';
+import { Link } from 'gatsby';
 import { Header } from 'flotiq-components-react';
 import ProductCard from '../components/ProductCard';
 
@@ -7,7 +7,9 @@ const BestSellers = ({ products, additionalClass, headerText }) => (
     <div className={['w-full', ...additionalClass].join(' ')}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between">
-                <Header text={headerText} additionalClasses={['!text-xl md:!text-3xl !font-normal font-roboto !p-0']} />
+                <Header additionalClasses={['!text-xl md:!text-3xl !font-normal font-roboto !p-0']}>
+                    {headerText}
+                </Header>
                 <Link
                     className="text-right underline underline-offset-2 decoration-1 text-lg hover:text-secondary"
                     to="/products/"

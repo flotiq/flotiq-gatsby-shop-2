@@ -34,21 +34,21 @@ const ProductTemplate = ({ data }) => {
                         />
                     </div>
                     <div className="flex flex-col basis-full lg:basis-1/2 pl-0 lg:pl-12 pt-5 pb-10 bg-white">
-                        <Header
-                            additionalClasses={['text-xl md:text-5xl !font-normal !pb-0']}
-                            text={product.name}
-                        />
-                        <Header
-                            additionalClasses={['!font-light !p-0']}
-                            text="Category"
-                            level={2}
-                        />
-                        <Paragraph text={product.description} additionalClasses={['mt-10 text-lg']} />
+                        <Header additionalClasses={['text-xl md:text-5xl !font-normal !pb-0']}>
+                            {product.name}
+                        </Header>
+                        <Header additionalClasses={['!font-light !p-0']} level={2}>
+                            Category
+                        </Header>
+                        <Paragraph additionalClasses={['mt-10 text-lg']}>
+                            {product.description}
+                        </Paragraph>
                         <div className="flex flex-col md:flex-row md:items-center md:space-x-16 mt-10">
                             <Header
-                                text={`$${product.price}`}
                                 additionalClasses={['text-red !p-0 order-2 md:order-1 mt-3 md:mt-0']}
-                            />
+                            >
+                                {`$${product.price}`}
+                            </Header>
                             <div className="flex items-center text-2xl font-normal order-1 md:order-2">
                                 Quantity:
                                 <div className="flex items-center md:items-stretch ml-8 font-roboto">
