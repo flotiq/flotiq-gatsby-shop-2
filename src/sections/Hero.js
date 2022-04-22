@@ -16,10 +16,13 @@ const Hero = ({ heroImage, headerText, paragraphText, buttonLabel }) => (
                 w-full lg:basis-6/12 order-2 lg:order-1 lg:min-h-1/2vh"
             >
                 <Header
-                    text={headerText}
                     additionalClasses={['!font-thin !text-5xl md:!text-6xl lg:!text-7xl font-roboto']}
-                />
-                <Paragraph text={paragraphText} additionalClasses={['w-full lg:w-1/2 !font-thin !text-2xl lg:mt-5']} />
+                >
+                    {headerText}
+                </Header>
+                <Paragraph additionalClasses={['w-full lg:w-1/2 !font-thin !text-2xl lg:mt-5']}>
+                    {paragraphText}
+                </Paragraph>
                 <Button
                     label={buttonLabel}
                     onClick={() => { navigate('/products/'); }}

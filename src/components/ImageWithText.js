@@ -9,17 +9,18 @@ const ImageWithText = ({ image, headerText1, headerText2, headerText3, buttonLab
         w-full lg:w-1/2 bg-gradient-to-r from-primary to-transparent"
             >
                 <Header
-                    text={headerText1}
                     additionalClasses={['block !font-thin !text-5xl md:!text-7xl !p-0 mb-1 md:mb-3']}
-                />
+                >
+                    {headerText1}
+                </Header>
                 <Header
-                    text={headerText2}
                     additionalClasses={['block !font-thin !text-5xl md:!text-7xl !p-0 mb-1 md:mb-3']}
-                />
-                <Header
-                    text={headerText3}
-                    additionalClasses={['block !font-thin !text-5xl md:!text-7xl !p-0']}
-                />
+                >
+                    {headerText2}
+                </Header>
+                <Header additionalClasses={['block !font-thin !text-5xl md:!text-7xl !p-0']}>
+                    {headerText3}
+                </Header>
                 <Button
                     label={buttonLabel}
                     rounded="none"

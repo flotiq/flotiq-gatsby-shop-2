@@ -4,7 +4,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Contact from '../sections/Contact';
 import Logo from '../assets/planty-logo.svg';
-import contactFormImage from '../assets/contact-form-image.jpg';
 
 const Layout = ({ children, additionalClass = [] }) => (
     <main className={['font-grotesque', ...additionalClass].join(' ')}>
