@@ -26,6 +26,7 @@
     "@tailwindcss/line-clamp": "^0.3.1",
     "flotiq-components-react": "^1.0.0",
     "gatsby": "^4.4.0",
+    "gatsby-plugin-gatsby-cloud": "^4.13.0",
     "gatsby-plugin-google-analytics": "^4.4.0",
     "gatsby-plugin-image": "^2.4.0",
     "gatsby-plugin-manifest": "^4.4.0",
