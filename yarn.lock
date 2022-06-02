@@ -5532,15 +5532,6 @@ gatsby-page-utils@^2.4.0:
     lodash "^4.17.21"
     micromatch "^4.0.4"
 
-
-gatsby-plugin-google-gtag@^4.12.1:
-  version "4.12.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-4.12.1.tgz#2e9ffa3aca3a5df26a95408e4ed5898003bfd089"
-  integrity sha512-dYf5zC+FPekohgXMnJYTkjz9J/IC3R3eHR6xjgLCEsMUxw7s0AApZxq7IUyCTTioGvLi3k/NPS9sBob7/60n9Q==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-    minimatch "^3.1.2"
-
 gatsby-plugin-gatsby-cloud@^4.13.0:
   version "4.13.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-gatsby-cloud/-/gatsby-plugin-gatsby-cloud-4.13.0.tgz#55666589923aa835875673d2c170189dfe71de41"
@@ -5555,6 +5546,14 @@ gatsby-plugin-gatsby-cloud@^4.13.0:
     kebab-hash "^0.1.2"
     lodash "^4.17.21"
     webpack-assets-manifest "^5.1.0"
+
+gatsby-plugin-google-gtag@^4.12.1:
+  version "4.12.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-4.12.1.tgz#2e9ffa3aca3a5df26a95408e4ed5898003bfd089"
+  integrity sha512-dYf5zC+FPekohgXMnJYTkjz9J/IC3R3eHR6xjgLCEsMUxw7s0AApZxq7IUyCTTioGvLi3k/NPS9sBob7/60n9Q==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    minimatch "^3.1.2"
 
 gatsby-plugin-image@^2.4.0:
   version "2.4.0"
@@ -11386,11 +11385,6 @@ weak-lru-cache@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/weak-lru-cache/-/weak-lru-cache-1.2.2.tgz#fdbb6741f36bae9540d12f480ce8254060dccd19"
   integrity sha512-DEAoo25RfSYMuTGc9vPJzZcZullwIqRDSI9LOy+fkCJPi6hykCnfKaXTuPBDuXAUcqHXyOgFtHNp/kB2FjYHbw==
-
-web-vitals@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/web-vitals/-/web-vitals-1.1.2.tgz"
-  integrity sha512-PFMKIY+bRSXlMxVAQ+m2aw9c/ioUYfDgrYot0YUa+/xa0sakubWhSDyxAKwzymvXVdF4CZI71g06W+mqhzu6ig==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"

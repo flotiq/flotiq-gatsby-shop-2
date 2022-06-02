@@ -18,7 +18,7 @@ const ReviewsSection = ({ headerText, reviews, avatar, additionalClass }) => (
                         {review.review}
                     </Paragraph>
                     <div className="flex items-center space-x-3">
-                        <Image url={avatar} alt={review.author} width={44} heigh={44} />
+                        <Image url={avatar} alt={review.author} width="44px" heigh="44px" />
                         <Paragraph additionalClasses={['!text-xl !font-medium']}>
                             {review.author}
                         </Paragraph>
