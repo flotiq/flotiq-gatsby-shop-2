@@ -1,0 +1,31 @@
+{
+    "id": "product-2",
+    "name": "Sarcandra glabra",
+    "slug": "sarcandra-glabra",
+    "price": "10",
+    "internal": {
+        "createdAt": "2020-12-14T16:16:40+00:00",
+        "deletedAt": "",
+        "updatedAt": "2022-03-07T13:59:26+00:00",
+        "contentType": "product",
+        "objectTitle": "Sarcandra glabra",
+        "workflow_state": "saved"
+    },
+    "description": "<p><strong>A cactus (plural cacti, cactuses, or less commonly, cactus) is a member of the plant family Cactaceae,&nbsp;a family comprising about 127 genera with some 1750 known species of the order Caryophyllales.</strong></p>\n\n<p>The word \"cactus\" derives, through Latin, from the Ancient Greek κάκτος, kaktos, a name originally used by Theophrastus for a spiny plant whose identity is now not certain.</p>\n",
+    "productImage": [
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-53f18363-1d21-442e-be4d-1ffe15f6fb94"
+        }
+    ],
+    "productGallery": [
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-b0172b1a-edae-4e27-be8c-76441429497b"
+        },
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-562dbf58-9a11-4687-a136-9383606badf1"
+        }
+    ]
+}

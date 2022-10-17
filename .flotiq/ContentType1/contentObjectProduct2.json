@@ -1,0 +1,35 @@
+{
+    "id": "product-4",
+    "name": "Green Plant",
+    "slug": "green-plant",
+    "price": "15",
+    "internal": {
+        "createdAt": "2020-12-14T16:16:40+00:00",
+        "deletedAt": "",
+        "updatedAt": "2022-03-07T13:57:30+00:00",
+        "contentType": "product",
+        "objectTitle": "Green Plant",
+        "workflow_state": "saved"
+    },
+    "description": "<p><strong>A cactus (plural cacti, cactuses, or less commonly, cactus)&nbsp;is a member of the plant family Cactaceae,&nbsp;a family comprising about 127 genera with some 1750 known species of the order Caryophyllales. </strong></p>\n\n<p>The word \"cactus\" derives, through Latin, from the Ancient Greek κάκτος, kaktos, a name originally used by Theophrastus for a spiny plant whose identity is now not certain.</p>\n",
+    "productImage": [
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-0278f7c2-65af-4163-9c52-8b94699208a0"
+        }
+    ],
+    "productGallery": [
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-4f4c6206-0406-40b7-b26f-0db9fc096eb4"
+        },
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-0a0be6ca-91e4-483e-9c9c-27f43e6a02d7"
+        },
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-adcdd995-6592-44bb-b319-d4b99cf40e9f"
+        }
+    ]
+}

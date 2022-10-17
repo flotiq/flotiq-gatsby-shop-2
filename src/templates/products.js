@@ -43,6 +43,7 @@ const ProductsPage = ({ data, pageContext }) => {
                     rounded="none"
                     variant="secondary"
                     containerAdditionalClasses={['!mt-0 mb-10']}
+                    baseUrl="/products/"
                 />
             </div>
             <BestSellers products={products} additionalClass={['bg-green-gray py-14']} headerText="Best sellers" />
