@@ -16,11 +16,10 @@
           },
           "slug": {
             "type": "string",
-            "pattern": "^[a-zA-Z0-9-_]*$",
             "minLength": 1
           },
           "price": {
-            "type": "number",
+            "type": "string",
             "minLength": 1
           },
           "description": {
@@ -51,47 +50,6 @@
     "additionalProperties": false
   },
   "metaDefinition": {
-    "propertiesConfig": {
-      "name": {
-        "label": "Name",
-        "inputType": "text",
-        "unique": true,
-        "isTitlePart": true
-      },
-      "slug": {
-        "label": "Slug",
-        "inputType": "text",
-        "helpText": "Slug can only have alphanumerical characters, - and _",
-        "unique": true
-      },
-      "price": {
-        "label": "Price",
-        "inputType": "number",
-        "unique": false
-      },
-      "description": {
-        "label": "Description",
-        "inputType": "richtext",
-        "unique": false
-      },
-      "productImage": {
-        "label": "Product image",
-        "inputType": "datasource",
-        "unique": false,
-        "validation": {
-          "relationContenttype": "_media"
-        }
-      },
-      "productGallery": {
-        "label": "Product gallery",
-        "inputType": "datasource",
-        "unique": false,
-        "validation": {
-          "relationMultiple": true,
-          "relationContenttype": "_media"
-        }
-      }
-    },
     "order": [
       "name",
       "slug",
@@ -99,6 +57,52 @@
       "description",
       "productImage",
       "productGallery"
-    ]
+    ],
+    "propertiesConfig": {
+      "name": {
+        "label": "Name",
+        "unique": true,
+        "helpText": "",
+        "inputType": "text",
+        "isTitlePart": true
+      },
+      "slug": {
+        "label": "Slug",
+        "unique": true,
+        "helpText": "",
+        "inputType": "text"
+      },
+      "price": {
+        "label": "Price",
+        "unique": false,
+        "helpText": "",
+        "inputType": "text"
+      },
+      "description": {
+        "label": "Description",
+        "unique": false,
+        "helpText": "",
+        "inputType": "richtext"
+      },
+      "productImage": {
+        "label": "Product image",
+        "unique": false,
+        "helpText": "",
+        "inputType": "datasource",
+        "validation": {
+          "relationContenttype": "_media"
+        }
+      },
+      "productGallery": {
+        "label": "Product gallery",
+        "unique": false,
+        "helpText": "",
+        "inputType": "datasource",
+        "validation": {
+          "relationMultiple": true,
+          "relationContenttype": "_media"
+        }
+      }
+    }
   }
 }
