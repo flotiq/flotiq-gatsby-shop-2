@@ -1,0 +1,35 @@
+{
+    "id": "product-1",
+    "name": "Sed consectetur",
+    "slug": "sed-consectetur",
+    "price": "12",
+    "internal": {
+        "createdAt": "2020-12-14T16:16:40+00:00",
+        "deletedAt": "",
+        "updatedAt": "2022-03-07T13:55:51+00:00",
+        "contentType": "product",
+        "objectTitle": "Sed consectetur",
+        "workflow_state": "saved"
+    },
+    "description": "<p>A cactus (plural cacti, cactuses, or less commonly, cactus)&nbsp;is a member of the plant family Cactaceae,&nbsp;a family comprising about 127 genera with some 1750 known species of the order Caryophyllales. The word \"cactus\" derives, through Latin, from the Ancient Greek κάκτος, kaktos, a name originally used by Theophrastus for a spiny plant whose identity is now not certain.</p>\n",
+    "productImage": [
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-14512db6-bc29-488e-a555-d8f22e9a4a87"
+        }
+    ],
+    "productGallery": [
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-451a127c-9578-475d-91e0-c9dc1d6a9675"
+        },
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-216836e2-ab22-45f6-ba8f-b4772dc127d5"
+        },
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-b605dbde-c5ea-418c-ab33-bdb4f67aeec9"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "id": "product-3",
+    "name": "English Tree",
+    "slug": "english-tree",
+    "price": "9",
+    "internal": {
+        "createdAt": "2020-12-14T16:16:40+00:00",
+        "deletedAt": "",
+        "updatedAt": "2022-03-07T13:58:06+00:00",
+        "contentType": "product",
+        "objectTitle": "English Tree",
+        "workflow_state": "saved"
+    },
+    "description": "<p><strong>A cactus (plural cacti, cactuses, or less commonly, cactus)&nbsp;is a member of the plant family Cactaceae,&nbsp;a family comprising about 127 genera with some 1750 known species of the order Caryophyllales.</strong></p>\n\n<p><em>The word \"cactus\" derives, through Latin, from the Ancient Greek κάκτος, kaktos, a name originally used by Theophrastus for a spiny plant whose identity is now not certain.</em></p>\n",
+    "productImage": [
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-591373a4-c15f-4d2d-8942-004c2798115d"
+        }
+    ],
+    "productGallery": [
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-2a40653e-4e2f-4055-96d3-a75734a6e3d2"
+        },
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-b577da1e-6d8a-412c-a710-46b6d62d31ed"
+        }
+    ]
+}
