@@ -1,0 +1,35 @@
+{
+    "id": "product-907659",
+    "name": "Dragon plant",
+    "slug": "dragon-plant",
+    "price": "20",
+    "internal": {
+        "createdAt": "2022-02-15T13:36:42+00:00",
+        "deletedAt": "",
+        "updatedAt": "2022-03-07T13:56:51+00:00",
+        "contentType": "product",
+        "objectTitle": "Dragon plant",
+        "workflow_state": "saved"
+    },
+    "description": "<p>A cactus (plural cacti, cactuses, or less commonly, cactus)&nbsp;is a member of the plant family Cactaceae,&nbsp;a family comprising about 127 genera with some 1750 known species of the order Caryophyllales. The word \"cactus\" derives, through Latin, from the Ancient Greek κάκτος, kaktos, a name originally used by Theophrastus for a spiny plant whose identity is now not certain.</p>\n",
+    "productImage": [
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-e25b9882-ba41-4a05-bbc3-ce9afeb74d4d"
+        }
+    ],
+    "productGallery": [
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-b577da1e-6d8a-412c-a710-46b6d62d31ed"
+        },
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-b605dbde-c5ea-418c-ab33-bdb4f67aeec9"
+        },
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-4f4c6206-0406-40b7-b26f-0db9fc096eb4"
+        }
+    ]
+}
