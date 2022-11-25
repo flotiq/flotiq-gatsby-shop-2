@@ -7,7 +7,7 @@ const Hero = ({ heroImage, headerText, paragraphText, buttonLabel }) => (
     <div className="w-full relative">
         <div
             className="hidden lg:block absolute right-0 w-1/2 h-full bg-cover bg-no-repeat bg-center"
-            style={{ backgroundImage: `url('${heroImage}')` }}
+            style={{ backgroundImage: `url('${heroImage.publicURL}')` }}
         />
         <div className="max-w-7xl mx-auto lg:px-8 flex flex-wrap">
             <div

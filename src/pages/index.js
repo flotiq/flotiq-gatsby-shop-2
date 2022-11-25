@@ -8,18 +8,23 @@ import Hero from '../sections/Hero';
 import BestSellers from '../sections/BestSellers';
 import Products from '../sections/Products';
 import ReviewsSection from '../sections/ReviewsSection';
-import Avatar from '../assets/avatar.png';
 
 const IndexPage = () => {
     const data = useStaticQuery(query);
     const products = data.allProduct.nodes;
     const reviews = [
-        { review: 'The best store in our town! plants are always in good condition.',
-            author: 'Joe Jonas' },
-        { review: 'I ordered 3 packs of roses last friday and they all came so fast and fresh',
-            author: 'Kate Smith' },
-        { review: 'The staff was so sweet they helped me decorate my room with plants!',
-            author: 'John Doe' },
+        {
+            review: 'The best store in our town! plants are always in good condition.',
+            author: 'Joe Jonas'
+        },
+        {
+            review: 'I ordered 3 packs of roses last friday and they all came so fast and fresh',
+            author: 'Kate Smith'
+        },
+        {
+            review: 'The staff was so sweet they helped me decorate my room with plants!',
+            author: 'John Doe'
+        },
     ];
     return (
         <Layout additionalClass={['bg-white']}>
@@ -41,7 +46,6 @@ const IndexPage = () => {
             <ReviewsSection
                 headerText="Reviews"
                 reviews={reviews}
-                avatar={Avatar}
                 additionalClass={['my-10 lg:my-24']}
             />
             <ImageWithText
@@ -79,7 +83,7 @@ const query = graphql`
                     localFile {
                         publicURL
                         childImageSharp {
-                            gatsbyImageData(layout: FULL_WIDTH)
+                            gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
                         }
                     }
                 }
@@ -91,15 +95,16 @@ const query = graphql`
                     localFile {
                         publicURL
                         childImageSharp {
-                            gatsbyImageData(layout: FULL_WIDTH)
+                            gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
                         }
                     }
                 }
             }
         }
         heroImage: file(name: {eq: "hero-bg"}) {
+            publicURL
             childImageSharp {
-                gatsbyImageData(layout: FULL_WIDTH)
+                gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
             }
         }
     }

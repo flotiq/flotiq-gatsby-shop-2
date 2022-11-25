@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button, Header, Image } from 'flotiq-components-react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { Button, Header } from 'flotiq-components-react';
+import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const instagramSvgContent = 'M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.90'
@@ -74,7 +74,6 @@ const socialIcons = {
 };
 
 const Contact = ({
-    logoImage,
     additionalClass,
     formHeaderText,
     nameInputLabel,
@@ -88,17 +87,18 @@ const Contact = ({
     const data = useStaticQuery(query);
     return (
         <div className={['flex flex-wrap max-w-7xl mx-auto '
-        + 'py-1 md:py-6 px-4 sm:px-6 lg:px-8', ...additionalClass].join(' ')}
+            + 'py-1 md:py-6 px-4 sm:px-6 lg:px-8', ...additionalClass].join(' ')}
         >
             <div className="basis-full lg:basis-1/2 flex flex-col items-start
         justify-between order-2 lg:order-1 md:mt-10 lg:mt-0"
             >
-                <Image
-                    url={logoImage}
-                    additionalClasses={['hidden md:block h-10 md:h-16 w-auto']}
+                <StaticImage
+                    src='../assets/planty-logo.svg'
+                    className={['hidden md:block h-10 md:h-16 w-auto']}
                     alt="Planty logo"
-                    width={157.7}
-                    height={63}
+                    width={160}
+                    height={64}
+                    placeholder="none"
                 />
                 <div className="w-full md:w-auto flex justify-center mt-10 lg:mt-0">
                     <div className="hidden md:block flex flex-col space-y-1">
@@ -134,12 +134,13 @@ const Contact = ({
                     </div>
                 </div>
                 <div className="w-full md:hidden flex items-center justify-between mt-10">
-                    <Image
-                        url={logoImage}
-                        additionalClasses={['h-10 md:h-16 w-auto']}
+                    <StaticImage
+                        src='../assets/planty-logo.svg'
+                        className={['h-10 md:h-16 w-auto']}
                         alt="Planty logo"
-                        width={157.7}
-                        height={63}
+                        width={100}
+                        height={40}
+                        placeholder="none"
                     />
                     <div className="flex space-x-6">
                         {socialIcons.social.map((item) => (
@@ -233,7 +234,7 @@ const query = graphql`
     query contactQuery {
         file(name: {eq: "contact-form-image"}) {
             childImageSharp {
-                gatsbyImageData(layout: FULL_WIDTH)
+                gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
             }
         }
     }
