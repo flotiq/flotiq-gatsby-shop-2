@@ -33,7 +33,7 @@ const Hero = ({ heroImage, headerText, paragraphText, buttonLabel }) => (
                 />
             </div>
             <div
-                className="w-full lg:basis-6/12 lg:w-auto order-1 lg:order-2"
+                className="w-full lg:basis-6/12 lg:hidden lg:w-auto order-1 lg:order-2"
             >
                 <GatsbyImage
                     image={getImage(heroImage)}

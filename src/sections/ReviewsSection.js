@@ -2,7 +2,7 @@ import React from 'react';
 import { Header, Paragraph } from 'flotiq-components-react';
 import { StaticImage } from 'gatsby-plugin-image';
 
-const ReviewsSection = ({ headerText, reviews, avatar, additionalClass }) => (
+const ReviewsSection = ({ headerText, reviews, additionalClass }) => (
     <div
         className={['flex flex-wrap items-center max-w-7xl '
             + 'mx-auto py-1 md:py-6 px-4 sm:px-6 lg:px-8', ...additionalClass].join(' ')}
@@ -19,7 +19,9 @@ const ReviewsSection = ({ headerText, reviews, avatar, additionalClass }) => (
                         {review.review}
                     </Paragraph>
                     <div className="flex items-center space-x-3">
-                        <StaticImage src='../assets/avatar.png' alt={review.author} width={44} height={44} placeholder="none" />
+                        <StaticImage
+                            src='../assets/avatar.png' alt={review.author} width={44} height={44} placeholder="none"
+                        />
                         <Paragraph additionalClasses={['!text-xl !font-medium']}>
                             {review.author}
                         </Paragraph>
