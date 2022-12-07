@@ -15,15 +15,15 @@ const IndexPage = () => {
     const reviews = [
         {
             review: 'The best store in our town! plants are always in good condition.',
-            author: 'Joe Jonas'
+            author: 'Joe Jonas',
         },
         {
             review: 'I ordered 3 packs of roses last friday and they all came so fast and fresh',
-            author: 'Kate Smith'
+            author: 'Kate Smith',
         },
         {
             review: 'The staff was so sweet they helped me decorate my room with plants!',
-            author: 'John Doe'
+            author: 'John Doe',
         },
     ];
     return (
@@ -61,53 +61,53 @@ const IndexPage = () => {
 };
 
 const query = graphql`
-    query indexQuery {
-        site {
-            siteMetadata {
-                title
-                description
-            }
-        }
-        allProduct(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: 4) {
-            nodes {
-                name
-                price
-                slug
-                description
-                id
-                productGallery {
-                    extension
-                    url
-                    width
-                    height
-                    localFile {
-                        publicURL
-                        childImageSharp {
-                            gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
-                        }
-                    }
-                }
-                productImage {
-                    extension
-                    url
-                    width
-                    height
-                    localFile {
-                        publicURL
-                        childImageSharp {
-                            gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
-                        }
-                    }
-                }
-            }
-        }
-        heroImage: file(name: {eq: "hero-bg"}) {
+query indexQuery {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+    allProduct(sort: {flotiqInternal: {createdAt: DESC}}, limit: 4) {
+      nodes {
+        name
+        price
+        slug
+        description
+        id
+        productGallery {
+          extension
+          url
+          width
+          height
+          localFile {
             publicURL
             childImageSharp {
-                gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
             }
+          }
         }
+        productImage {
+          extension
+          url
+          width
+          height
+          localFile {
+            publicURL
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
+            }
+          }
+        }
+      }
     }
+    heroImage: file(name: {eq: "hero-bg"}) {
+      publicURL
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
+      }
+    }
+  }
 `;
 
 export default IndexPage;

@@ -93,7 +93,7 @@ const Contact = ({
         justify-between order-2 lg:order-1 md:mt-10 lg:mt-0"
             >
                 <StaticImage
-                    src='../assets/planty-logo.svg'
+                    src="../assets/planty-logo.svg"
                     className={['hidden md:block h-10 md:h-16 w-auto']}
                     alt="Planty logo"
                     width={160}
@@ -135,7 +135,7 @@ const Contact = ({
                 </div>
                 <div className="w-full md:hidden flex items-center justify-between mt-10">
                     <StaticImage
-                        src='../assets/planty-logo.svg'
+                        src="../assets/planty-logo.svg"
                         className={['h-10 md:h-16 w-auto']}
                         alt="Planty logo"
                         width={100}
