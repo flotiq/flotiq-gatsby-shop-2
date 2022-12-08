@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Contact from '../sections/Contact';
-import Logo from '../assets/planty-logo.svg';
 
 const Layout = ({ children, additionalClass = [] }) => (
     <main className={['font-grotesque', ...additionalClass].join(' ')}>
@@ -13,7 +12,6 @@ const Layout = ({ children, additionalClass = [] }) => (
         <Header />
         {children}
         <Contact
-            logoImage={Logo}
             additionalClass={['my-5']}
             formHeaderText="Connect with us"
             nameInputLabel="Name"
