@@ -70,7 +70,7 @@ module.exports = {
             resolve: 'gatsby-plugin-sharp',
             options: {
                 defaults: {
-                    quality: 80
+                    quality: 80,
                 },
                 base64Width: 20,
             },

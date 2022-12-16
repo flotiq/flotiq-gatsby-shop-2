@@ -20,7 +20,11 @@ const ReviewsSection = ({ headerText, reviews, additionalClass }) => (
                     </Paragraph>
                     <div className="flex items-center space-x-3">
                         <StaticImage
-                            src='../assets/avatar.png' alt={review.author} width={44} height={44} placeholder="none"
+                            src="../assets/avatar.png"
+                            alt={review.author}
+                            width={44}
+                            height={44}
+                            placeholder="none"
                         />
                         <Paragraph additionalClasses={['!text-xl !font-medium']}>
                             {review.author}
