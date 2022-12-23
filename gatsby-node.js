@@ -7,14 +7,14 @@ exports.createPages = async ({ graphql, actions }) => {
     const productsPage = path.resolve('./src/templates/products.js');
     const result = await graphql(`
         query GetProducts {
-            allProduct(sort: {order: DESC, fields: flotiqInternal___createdAt}) {
-                edges {
-                    node {
-                        slug
-                    }
-                }
-            }
-        }
+  allProduct(sort: {flotiqInternal: {createdAt: DESC}}) {
+    edges {
+      node {
+        slug
+      }
+    }
+  }
+}
 `);
 
     if (result.errors) {
