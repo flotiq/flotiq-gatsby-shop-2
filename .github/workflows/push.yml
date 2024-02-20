@@ -1,5 +1,10 @@
-name: test-build
-on: push
+name: Push workflow
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+    
 jobs:
   test:
     runs-on: ubuntu-latest
