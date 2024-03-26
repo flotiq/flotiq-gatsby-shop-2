@@ -1,3 +1,4 @@
+import 'flotiq-components-react/dist/index-including-tailwind.css';
 import './src/style/global.css';
 import '@fontsource/inter/600.css';
 import '@fontsource/sora/400.css';

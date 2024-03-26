@@ -25,7 +25,7 @@ const ImageWithText = ({ image, headerText1, headerText2, headerText3, buttonLab
                     label={buttonLabel}
                     rounded="none"
                     onClick={() => { navigate('/products/'); }}
-                    additionalClasses={['mt-5 md:mt-10 bg-white text-secondary']}
+                    additionalClasses={['mt-5 md:mt-10 bg-white !text-secondary']}
                 />
             </div>
         </div>
