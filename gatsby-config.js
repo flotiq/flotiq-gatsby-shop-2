@@ -109,15 +109,5 @@ module.exports = {
                 publicApiKey: process.env.SNIPCART_API_KEY,
             },
         },
-        {
-            resolve: 'gatsby-plugin-gatsby-cloud',
-            options: {
-                headers: {
-                    '/*': [
-                        'x-frame-options: allow-from https://jamstackthemes.dev/',
-                    ],
-                },
-            },
-        },
     ],
 };

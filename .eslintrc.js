@@ -12,7 +12,7 @@ module.exports = {
         },
     },
     extends: [
-        'react',
+        'react-app',
         'plugin:react/recommended',
         'airbnb',
         'eslint:recommended',
