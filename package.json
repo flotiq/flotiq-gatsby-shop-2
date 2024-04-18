@@ -25,7 +25,7 @@
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/line-clamp": "^0.4.4",
     "flotiq-components-react": "^1.1.5",
-    "gatsby": "^5.13.3",
+    "gatsby": "^5.13.4",
     "gatsby-plugin-google-gtag": "^5.13.1",
     "gatsby-plugin-image": "3.12.3",
     "gatsby-plugin-manifest": "^5.13.1",
@@ -41,8 +41,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
+    "string-width": "4.2.3",
     "typescript": "^5.4.5",
-    "webpack": "^5.91.0"
+    "webpack": "^5.91.0",
+    "wrap-ansi": "^9.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.24.3",
@@ -78,6 +80,7 @@
     "url": "https://github.com/flotiq/flotiq-gatsby-shop-2/issues"
   },
   "resolutions": {
+    "string-width": "4.2.3",
     "webpack": "^5.91.0"
   }
 }
