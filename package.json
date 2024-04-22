@@ -15,7 +15,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@fontsource/darker-grotesque": "^5.0.19",
+    "@fontsource/darker-grotesque": "^5.0.20",
     "@fontsource/inter": "^5.0.17",
     "@fontsource/roboto": "^5.0.12",
     "@fontsource/sora": "^5.0.17",
