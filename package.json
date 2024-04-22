@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@fontsource/darker-grotesque": "^5.0.19",
-    "@fontsource/inter": "^5.0.17",
+    "@fontsource/inter": "^5.0.18",
     "@fontsource/roboto": "^5.0.12",
     "@fontsource/sora": "^5.0.17",
     "@headlessui/react": "^1.7.18",
