@@ -41,7 +41,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "string-width": "4.2.3",
+    "string-width": "7.2.0",
     "typescript": "^5.4.5",
     "webpack": "^5.91.0",
     "wrap-ansi": "^9.0.0"
@@ -80,7 +80,7 @@
     "url": "https://github.com/flotiq/flotiq-gatsby-shop-2/issues"
   },
   "resolutions": {
-    "string-width": "4.2.3",
+    "string-width": "7.2.0",
     "webpack": "^5.91.0"
   }
 }
