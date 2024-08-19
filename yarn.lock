@@ -1500,10 +1500,10 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.7.tgz#d0ece53ce99ab5a8e37ebdfe5e32452a2bfc073e"
   integrity sha512-X8R8Oj771YRl/w+c1HqAC1szL8zWQRwFvgDwT129k9ACdBoud/+/rX9V0qiMl6LWUdP9voC2nDVZYPMQQsb6eA==
 
-"@fontsource/darker-grotesque@^5.0.20":
-  version "5.0.20"
-  resolved "https://registry.yarnpkg.com/@fontsource/darker-grotesque/-/darker-grotesque-5.0.20.tgz#52847d0edd0e9e1ffe102a4e0e96ac27d637ee07"
-  integrity sha512-5v8lI2QV6JYo6yi7fI8tiqg6LMcNuVSjFLwTmqZmqpUV9gJq7q+I8VnzJIx7lhWtq99MNJuNLG1iCcIilf4PDA==
+"@fontsource/darker-grotesque@^5.0.21":
+  version "5.0.21"
+  resolved "https://registry.yarnpkg.com/@fontsource/darker-grotesque/-/darker-grotesque-5.0.21.tgz#87a1ba48172eb85c978857c5fb8a9e006a5a675f"
+  integrity sha512-jHQn/CJ8FRrLKbPIlSohtduDve/L6YCeqtyhPlrFnfkdN8pdIjwNBNGJE4B+eqo7t//M4wUSA4xQvg46lwh7EQ==
 
 "@fontsource/inter@^5.0.20":
   version "5.0.20"
