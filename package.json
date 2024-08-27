@@ -15,16 +15,16 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@fontsource/darker-grotesque": "^5.0.20",
+    "@fontsource/darker-grotesque": "^5.0.21",
     "@fontsource/inter": "^5.0.20",
     "@fontsource/roboto": "^5.0.14",
-    "@fontsource/sora": "^5.0.18",
-    "@headlessui/react": "^2.1.2",
+    "@fontsource/sora": "^5.0.19",
+    "@headlessui/react": "^2.1.3",
     "@heroicons/react": "1.0.6",
     "@popperjs/core": "^2.11.8",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/line-clamp": "^0.4.4",
-    "flotiq-components-react": "^1.2.2",
+    "flotiq-components-react": "^2.0.0",
     "gatsby": "^5.13.7",
     "gatsby-plugin-google-gtag": "^5.13.1",
     "gatsby-plugin-image": "3.13.1",
@@ -37,12 +37,12 @@
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-source-flotiq": "^5.2.1",
     "gatsby-transformer-sharp": "^5.13.1",
-    "node": "^22.6.0",
+    "node": "^22.7.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
     "typescript": "^5.5.4",
-    "webpack": "^5.93.0",
+    "webpack": "^5.94.0",
     "wrap-ansi": "^9.0.0"
   },
   "devDependencies": {
@@ -52,7 +52,7 @@
     "@babel/plugin-transform-react-jsx": "^7.25.2",
     "@babel/preset-react": "^7.24.7",
     "@hot-loader/react-dom": "17.0.2",
-    "@typescript-eslint/parser": "^8.1.0",
+    "@typescript-eslint/parser": "^8.3.0",
     "autoprefixer": "^10.4.20",
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.3",
@@ -63,13 +63,13 @@
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx": "^0.1.0",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "gatsby-plugin-postcss": "^6.13.1",
     "postcss": "^8.4.41",
     "prettier": "^3.3.3",
-    "tailwindcss": "^3.4.9"
+    "tailwindcss": "^3.4.10"
   },
   "repository": {
     "type": "git",
@@ -79,6 +79,6 @@
     "url": "https://github.com/flotiq/flotiq-gatsby-shop-2/issues"
   },
   "resolutions": {
-    "webpack": "^5.93.0"
+    "webpack": "^5.94.0"
   }
 }
