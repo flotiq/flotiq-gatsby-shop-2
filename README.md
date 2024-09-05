@@ -63,7 +63,7 @@ This step is optional and is not necessary if you used flotiq-cli to start the p
 If you wish to import example data to your account, before running `gatsby develop` run:
 
 ```sh
-flotiq import . [flotiqApiKey]
+flotiq import .flotiq [flotiqApiKey]
 ```
 
 It will add four example objects to your Flotiq account.
@@ -241,4 +241,3 @@ Documentation for gatsby starters is [here](https://flotiq.com/docs/Universe/gat
 If you wish to talk with us about this project, feel free to hop on our [![Discord Chat](https://img.shields.io/discord/682699728454025410.svg)](https://discord.gg/FwXcHnX).
 
 If you found a bug, please report it in [issues](https://github.com/flotiq/flotiq-gatsby-shop-2/issues).
-
